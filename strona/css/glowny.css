@@ -1,19 +1,21 @@
 .tlo{
 	display: flex;
 	flex-wrap: wrap;
-	flex-direction: row;
-
-	block-size: 80vh;
-	inline-size:70vh;
+	flex-direction: column;
+	border: 1px solid;
+	block-size: 100vh;
+	background-color:#444;
+	inline-size:100vw;
+	justify-content: center;
 }
 
 
 
-.klasa1{
+.klasa{
 	background-color: #ccc;
-	height: 45px;
-	width: 70px;
-
-	paddi
+	height: 50%;
+	width: 50%;
+	border: 1px solid;
+	background-color:#666;
 
 }
