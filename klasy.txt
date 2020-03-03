@@ -1,0 +1,77 @@
+Klasy:
+obr:
+Siła
+Zręczność
+Inteligencja
+
+
+Mana
+HP
+
+
+Cios krytyczny
+Przeszywające uderzenie
+Unik
+
+Pancerz
+
+
+
+
+----
+Wojownik:
+
+Siła: 			3	
+Zręczność:		2
+Inteligencja:	1
+
+HP:				25
+Mana:			10
+
+Krytyk:			
+
+
+
+
+
+-----
+Mag:
+
+Siła:			1
+Zręczność:		2
+Inteligencja:	3
+
+HP:				15
+Mana:			20
+
+czary
+
+
+
+
+------
+Łowca:
+
+Siła:			1
+Zręczność:		3
+Inteligencja:	2
+
+HP:				15
+Mana:			15
+
+Przeszywka:
+
+
+
+
+--------------
+Tancerz ostrzy:
+
+Siła:			2
+Zręczność:		3
+Inteligencja:	1
+
+HP:				20
+Mana:			15
+
+Unik:
