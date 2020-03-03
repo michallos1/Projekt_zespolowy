@@ -1,0 +1,19 @@
+.tlo{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+
+	block-size: 80vh;
+	inline-size:70vh;
+}
+
+
+
+.klasa1{
+	background-color: #ccc;
+	height: 45px;
+	width: 70px;
+
+	paddi
+
+}
