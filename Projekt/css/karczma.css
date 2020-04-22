@@ -10,7 +10,7 @@
 .klasa1{
 	height: 100%;
 	width: 12%;
-	background-image:url("../obrazy/papirus.jpg");
+	background-color: #100705;
 	font-size: 30px;
 	padding-top:2%;
 
@@ -19,7 +19,9 @@
 .klasa2{
 	height: 100%;
 	width: 68%;
-	background-color:#a66;
+	background-image:url("../obrazy/tawerna.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
 
 }
 
@@ -27,14 +29,14 @@
 	height: 50%;
 	width: 20%;
 	background-color:#f66;
-
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .klasa4{
 	height: 50%;
 	width: 20%;
-	background-color:#166;
-
+	background-color:#100705;
 }
 
 .button 
@@ -45,7 +47,7 @@
 	text-align:center;
 	height:7%;
 	width:80%;
-	background-image:url("../obrazy/deska.jpg");
+	background-image: linear-gradient(to bottom right, blue, aqua);
 }
 
 .button:hover
