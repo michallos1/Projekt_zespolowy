@@ -27,3 +27,17 @@ class Wojownik extends Klasa {
         
     }
 }
+
+class Eq {
+    constructor(){
+        this.Weapon = 0;
+        this.Glove = 0;
+        this.Boots = 0;
+        this.Chest = 0;
+        this.Helm = 0;
+    }
+
+    Upgrade_wep(upgread){
+        this.Weapon = upgread + this.Weapon;
+    }
+}
