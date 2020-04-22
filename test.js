@@ -5,8 +5,6 @@ class Klasa {
         this.Str = 0;
         this.Gold = 0;
     }
-<<<<<<< Updated upstream
-=======
 
      LevelUp(Int,Dex,Str) { 
     }
@@ -28,5 +26,4 @@ class Wojownik extends Klasa {
     LevelUp(){
         
     }
->>>>>>> Stashed changes
 }
