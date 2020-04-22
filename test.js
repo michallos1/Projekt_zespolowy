@@ -30,6 +30,8 @@ class Wojownik extends Klasa {
     }
 }
 
+
+
 class Eq {
     constructor(){
         this.Weapon = 0;
@@ -41,5 +43,17 @@ class Eq {
 
     Upgrade_wep(upgread){
         this.Weapon = upgread + this.Weapon;
+    }
+    Upgrade_gl(upgread){
+        this.Glove = upgread + this.Glove;
+    }
+    Upgrade_boots(upgread){
+        this.Boots = upgread + this.Boots;
+    }
+    Upgrade_chest(upgread){
+        this.Chest = upgread + this.Chest;
+    }
+    Upgrade_helm(upgread){
+        this.Helm = upgread + this.Helm;
     }
 }
