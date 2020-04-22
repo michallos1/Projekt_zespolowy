@@ -1,28 +1,58 @@
-.kontener{
-}
-
-.menu{
-	float:left;
-	background-color: green;
-	height:10px;
-	width:10%;
+.tlo{
+	display: flex;
+	flex-flow: column wrap;
+	block-size: 98vh;
+	background-color:#fff;
+	inline-size:98vw;
 	
 }
 
-.srodek{float:left;
-	background-color: blue;
-	height:;
-	width:;
+.klasa1{
+	height: 100%;
+	width: 12%;
+	background-color: #100705;
+	font-size: 30px;
+	padding-top:2%;
+
 }
 
-.postac{float:left;
-	background-color: yellow;
-	height:;
-	width:;
+.klasa2{
+	height: 100%;
+	width: 68%;
+	background-color: #666;
+	/*background-image:url("../obrazy/karczma.jpg");*/
+	background-repeat: no-repeat;
+	background-size: cover;
+
 }
 
-.plecak{float:left;
-	background-color: red;
-	height:;
-	width:;
+.klasa3{
+	height: 50%;
+	width: 20%;
+	background-color:#f66;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.klasa4{
+	height: 50%;
+	width: 20%;
+	background-color:#100705;
+}
+
+.button 
+{
+	margin-left:10%;
+	margin-top:10%;
+	padding-top:6%;
+	text-align:center;
+	height:6%;
+	width:80%;
+	background-image: linear-gradient(to bottom right, blue, aqua);
+}
+
+.button:hover
+{
+	cursor:pointer;
+
 }
