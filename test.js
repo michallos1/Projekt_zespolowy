@@ -1,6 +1,8 @@
-class Klasa{
-    var Int;
-    var Dex;
-    var Str;
-    var Gold;
+class Klasa {
+    constructor(){
+        this.Int = 0;
+        this.Dex = 0;
+        this.Str = 0;
+        this.Gold = 0;
+    }
 }
