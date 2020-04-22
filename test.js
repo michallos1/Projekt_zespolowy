@@ -23,8 +23,10 @@ class Wojownik extends Klasa {
         this.Backpack = new Array[12];
     }
 
-    LevelUp(){
-        
+    LevelUp(Int,Dex,Str){
+        this.Int = this.Int + Int;
+        this.Def = this.Def + Dex;
+        this.Str = this.Str + Str;
     }
 }
 
