@@ -4,26 +4,33 @@
 <link rel="stylesheet" href="css/glowny.css">
 <style>.klasa2{background-image:url("obrazy/miasto.jpg");}</style>
 <script>
-	//`let karczma = document.getElementById('gray');
-	let targowisko = document.getElementById('gray');
-	let kuznia = document.getElementById('kuznia');
+	window.onload=function(){
 
-	targowisko.addEventListener('click', changeB);
-	//targowisko.addEventListener('click', changeA)
+
+	let targowisko = document.getElementById('gray');
+	
+	targowisko.addEventListener('click', changeA);
 
 	function changeB() {
+		srodek1 = document.getElementById('s1');
+		srodek2 = document.getElementById('s2');
+
 		srodek2.style.display = "none";
 		srodek1.style.display = "block";
 	}
 	
 	function changeA() {
+		srodek1 = document.getElementById('s1');
+		srodek2 = document.getElementById('s2');
+		
 		srodek2.style.display = "block";
 		srodek1.style.display = "none";
-	}
+	}}
 </script>
 </head>
 
 <body>
+
 
 	<div class="tlo">
 	
