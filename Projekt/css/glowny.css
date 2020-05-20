@@ -56,3 +56,15 @@
 	cursor:pointer;
 
 }
+
+.klasa2 .srodek1{
+width: 100%;
+height: 100%;
+display: block;
+}
+
+.klasa2 .srodek2{
+	width: 100%;
+	height: 100%;
+	display: none;
+}

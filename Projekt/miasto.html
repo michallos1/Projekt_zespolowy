@@ -3,6 +3,24 @@
 <title>Miasto</title>
 <link rel="stylesheet" href="css/glowny.css">
 <style>.klasa2{background-image:url("obrazy/miasto.jpg");}</style>
+<script>
+	//`let karczma = document.getElementById('gray');
+	let targowisko = document.getElementById('gray');
+	let kuznia = document.getElementById('kuznia');
+
+	targowisko.addEventListener('click', changeB);
+	//targowisko.addEventListener('click', changeA)
+
+	function changeB() {
+		srodek2.style.display = "none";
+		srodek1.style.display = "block";
+	}
+	
+	function changeA() {
+		srodek2.style.display = "block";
+		srodek1.style.display = "none";
+	}
+</script>
 </head>
 
 <body>
@@ -11,14 +29,21 @@
 	
 		<div class="klasa1">
 		
-			<div class="button">Karczma</div>
-			<div class="button">Targowisko</div>
-			<div class="button">Kuźnia</div>
+			<div class="button" id="karczma">Karczma</div>
+			<input id="gray" value="Gray avg" type="button">
+			<div class="button" id="targowisko">Targowisko</div>
+			<div class="button" id="kuznia">Kuźnia</div>
 		
 		
 		</div>
 		
 		<div class="klasa2">
+			<div class="srodek1" id="s1">
+				<p>Info 1</p>
+			</div>
+			<div class="srodek2" id="s2">
+				<p>Info 2</p>
+			</div>
 		</div>
 		
 		<div class="klasa3">
