@@ -1,22 +1,21 @@
 body { 
 	margin:0;
-	background-color: #111119;
 }
 
 .tlo{
 	display: none;
 	flex-flow: column wrap;
-	block-size: 98vh;
+	block-size: 100vh;
 	background-color:#fff;
-	inline-size:98vw;	
+	inline-size:100vw;	
 }
 
 .tlo1{
 	display:block;
 	flex-flow: column wrap;
-	block-size: 98vh;
+	block-size: 100vh;
 	background-color:#fff;
-	inline-size:98vw;	
+	inline-size:100vw;	
 	background-color: #111119;
 }
 
@@ -94,6 +93,7 @@ body {
 	height: 5%;
 	width: 30%;
 	font-size: 20px;
+	mar
 }
 
 input[type="button"]:hover
