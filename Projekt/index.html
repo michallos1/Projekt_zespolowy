@@ -5,15 +5,61 @@
 <script>
 	window.onload=function(){
 
+	let wojownik = document.getElementById('wojownik');
+	
+	wojownik.addEventListener('click', setWojownik);
+	
+	function setWojownik() {
+		tlo1 = document.getElementById('t1');
+		tlo = document.getElementById('t');
+
+		tlo1.style.display = "none";
+		tlo.style.display = "flex";
+		
+		var a=wojownik;
+	}
+	
+	let lucznik = document.getElementById('lucznik');
+	
+	lucznik.addEventListener('click', setLucznik);
+	
+	function setLucznik() {
+		tlo1 = document.getElementById('t1');
+		tlo = document.getElementById('t');
+
+		tlo1.style.display = "none";
+		tlo.style.display = "flex";
+		
+		var a=lucznik;
+	}
+	
+	let mag = document.getElementById('mag');
+	
+	mag.addEventListener('click', setMag);
+	
+	function setMag() {
+		tlo1 = document.getElementById('t1');
+		tlo = document.getElementById('t');
+
+		tlo1.style.display = "none";
+		tlo.style.display = "flex";
+		
+		var a=mag;
+	}
+
+
+
 	let targowisko = document.getElementById('targowisko');
 	let karczma = document.getElementById('karczma');
 	let miasto = document.getElementById('miasto');
-	let kuznia = document.getElementById('kuznia');
+	let kuznia = document.getElementById('kuznia');	
 
 	miasto.addEventListener('click', setMiasto);
 	karczma.addEventListener('click', setKarczma);
 	targowisko.addEventListener('click', setTargowisko);
 	kuznia.addEventListener('click', setKuznia);
+	
+
 
 	function setMiasto() {
 		srodek0 = document.getElementById('s0');
@@ -69,16 +115,45 @@
 
 <body>
 
+<div class="kontener">
 
-	<div class="tlo">
+	<div class="tlo1" id="t1">
 	
+		<div class="woj">
+			<img src="obrazy/wojownik.jpg"/>
+			</br>
+			<input id="wojownik" value="wojownik" type="button">
+		</div>
+		
+		<div class="lucz">
+			<img src="obrazy/lucznik.jpg"/>
+			</br>
+			<input id="lucznik" value="lucznik" type="button">
+		</div>
+		
+		<div class="mag">
+			<img src="obrazy/mag.jpg"/>
+			</br>
+			<input id="mag" value="mag" type="button">
+		</div>
+	</div>
+
+	<div class="tlo" id="t">
 		<div class="klasa1">
-			
-			<input id="miasto" value="Miasto" type="button">
-			<input id="karczma" value="Karczma" type="button">
-			<input id="targowisko" value="Targowisko" type="button">
-			<input id="kuznia" value="Kuźnia" type="button">
-			
+			<ul>
+				<li>
+					<input id="miasto" value="Miasto" type="button">
+				</li>
+				<li>				
+					<input id="karczma" value="Karczma" type="button">
+				</li>
+				<li>
+					<input id="targowisko" value="Targowisko" type="button">
+				</li>
+				<li>
+					<input id="kuznia" value="Kuźnia" type="button">
+				</li>
+			</ul>
 		</div>
 		
 		<div class="klasa2">
@@ -94,7 +169,6 @@
 			<div class="srodek3" id="s3">
 				Kuźnia
 			</div>
-
 		</div>
 		
 		<div class="klasa3">
@@ -102,9 +176,9 @@
 		
 		<div class="klasa4">
 		</div>
-		
 	</div>
 
+</div>
 
 </body>
 

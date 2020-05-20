@@ -1,10 +1,23 @@
+body { 
+	margin:0;
+	background-color: #111119;
+}
+
 .tlo{
-	display: flex;
+	display: none;
 	flex-flow: column wrap;
 	block-size: 98vh;
 	background-color:#fff;
-	inline-size:98vw;
-	
+	inline-size:98vw;	
+}
+
+.tlo1{
+	display:block;
+	flex-flow: column wrap;
+	block-size: 98vh;
+	background-color:#fff;
+	inline-size:98vw;	
+	background-color: #111119;
 }
 
 .klasa1{
@@ -13,6 +26,7 @@
 	background-color: #100705;
 	font-size: 30px;
 	padding-top:2%;
+	
 
 }
 
@@ -57,20 +71,24 @@
 
 }
 
+input input[type="button"]
+{
+	background-image: linear-gradient(to bottom right, blue, aqua);
+}
+
 .klasa2 .srodek0{
 	width: 100%;
 	height: 100%;
 	display: block;
-	/*background-image:url("obrazy/miasto.jpg");*/
+	background: url(../obrazy/miasto.jpg) center/100% no-repeat;
 	background-color: #fff;
 }
-
 
 .klasa2 .srodek1{
 	width: 100%;
 	height: 100%;
 	display: none;
-	/*background-image:url("obrazy/miasto.jpg");*/
+	background: url(../obrazy/karczma.jpg) center/100% no-repeat;
 	background-color: #00f;
 }
 
@@ -78,7 +96,7 @@
 	width: 100%;
 	height: 100%;
 	display: none;
-	background: url(obrazy/karczma.jpg) center/100% no-repeat;
+	background: url(../obrazy/targowisko.jpg) center/100% no-repeat;
 	background-color: #0f0;
 }
 
@@ -86,6 +104,41 @@
 	width: 100%;
 	height: 100%;
 	display: none;
-	background: url(obrazy/kuznia.jpg) center/100% no-repeat;
+	background: url(../obrazy/kuznia.jpg) center/100% no-repeat;
 	background-color: #f00;
+}
+
+.woj
+{
+	margin-top:5%;
+	margin-left:2%;
+	width:30%;
+	height: 70%;
+	background-color: #a00;
+	float: left;
+}
+
+.lucz
+{
+	margin-top:5%;
+	margin-left:4%;
+	width:30%;
+	height: 70%;
+	background-color: #0a0;
+	float: left;
+}
+
+.mag
+{
+	margin-top:5%;
+	margin-left:4%;
+	width:30%;
+	height: 70%;
+	background-color: #00a;
+	float: left;
+}
+
+.tlo1 img
+{
+	float: middle;
 }
