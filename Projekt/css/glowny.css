@@ -93,7 +93,7 @@ body {
 	height: 5%;
 	width: 30%;
 	font-size: 20px;
-	mar
+	margin-left: 35%;
 }
 
 input[type="button"]:hover
@@ -174,5 +174,4 @@ input[type="button"]:hover
 	margin-top: 2%;
 	text-align: center;
 	font-size: 40px;
-	
 }
