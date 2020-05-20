@@ -5,42 +5,61 @@
 <script>
 	window.onload=function(){
 
+	let targowisko = document.getElementById('targowisko');
+	let karczma = document.getElementById('karczma');
+	let miasto = document.getElementById('miasto');
+	let kuznia = document.getElementById('kuznia');
 
-	let targowisko = document.getElementById('gray');
-	
-	let karczma = document.getElementById('black');
-	
-	karczma.addEventListener('click', changeB);
-	
-	targowisko.addEventListener('click', changeA);
+	miasto.addEventListener('click', setMiasto);
+	karczma.addEventListener('click', setKarczma);
+	targowisko.addEventListener('click', setTargowisko);
+	kuznia.addEventListener('click', setKuznia);
 
-	function changeB() {
+	function setMiasto() {
+		srodek0 = document.getElementById('s0');
 		srodek1 = document.getElementById('s1');
 		srodek2 = document.getElementById('s2');
-		srodek2 = document.getElementById('s3');
+		srodek3 = document.getElementById('s3');
 
+		srodek0.style.display = "block";
+		srodek1.style.display = "none";
 		srodek2.style.display = "none";
+		srodek3.style.display = "none";
+	}
+	
+	function setKarczma() {
+		srodek0 = document.getElementById('s0');
+		srodek1 = document.getElementById('s1');
+		srodek2 = document.getElementById('s2');
+		srodek3 = document.getElementById('s3');
+
+		srodek0.style.display = "none";
 		srodek1.style.display = "block";
-		srodek3.style.display = "none";
-	}
-	
-	function changeA() {
-		srodek1 = document.getElementById('s1');
-		srodek2 = document.getElementById('s2');
-		srodek2 = document.getElementById('s3');
-		
-		srodek2.style.display = "block";
-		srodek1.style.display = "none";
+		srodek2.style.display = "none";
 		srodek3.style.display = "none";
 	}
 
-	function changeC() {
+	function setTargowisko() {
+		srodek0 = document.getElementById('s0');
 		srodek1 = document.getElementById('s1');
 		srodek2 = document.getElementById('s2');
-		srodek2 = document.getElementById('s3');
-		
-		srodek2.style.display = "none";
+		srodek3 = document.getElementById('s3');
+
+		srodek0.style.display = "none";
 		srodek1.style.display = "none";
+		srodek2.style.display = "block";
+		srodek3.style.display = "none";
+	}
+
+	function setKuznia() {
+		srodek0 = document.getElementById('s0');
+		srodek1 = document.getElementById('s1');
+		srodek2 = document.getElementById('s2');
+		srodek3 = document.getElementById('s3');
+
+		srodek0.style.display = "none";
+		srodek1.style.display = "none";
+		srodek2.style.display = "none";
 		srodek3.style.display = "block";
 	}
 	
@@ -54,30 +73,28 @@
 	<div class="tlo">
 	
 		<div class="klasa1">
-		
-			<div class="button" id="karczma">Karczma</div>
 			
-			<input id="gray" value="Gray avg" type="button">
-			<input id="black" value="Gray avg" type="button">
-			<input id="white" value="Gray avg" type="button">
+			<input id="miasto" value="Miasto" type="button">
+			<input id="karczma" value="Karczma" type="button">
+			<input id="targowisko" value="Targowisko" type="button">
+			<input id="kuznia" value="Kuźnia" type="button">
 			
-			<div class="button" id="targowisko">Targowisko</div>
-			<div class="button" id="kuznia">Kuźnia</div>
-			<div class="button" id="kuznia">Kuźnia</div>
-		
-		
 		</div>
 		
 		<div class="klasa2">
+			<div class="srodek0" id="s0">
+				Miasto
+			</div>
 			<div class="srodek1" id="s1">
-				 Info 1
+				Karczma
 			</div>
 			<div class="srodek2" id="s2">
-				Info 2
+				Targowisko
 			</div>
 			<div class="srodek3" id="s3">
-				Info 3
+				Kuźnia
 			</div>
+
 		</div>
 		
 		<div class="klasa3">

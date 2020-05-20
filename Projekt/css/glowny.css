@@ -57,10 +57,19 @@
 
 }
 
-.klasa2 .srodek1{
+.klasa2 .srodek0{
 	width: 100%;
 	height: 100%;
 	display: block;
+	/*background-image:url("obrazy/miasto.jpg");*/
+	background-color: #fff;
+}
+
+
+.klasa2 .srodek1{
+	width: 100%;
+	height: 100%;
+	display: none;
 	/*background-image:url("obrazy/miasto.jpg");*/
 	background-color: #00f;
 }
