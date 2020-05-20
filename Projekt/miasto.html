@@ -2,35 +2,46 @@
 <head>
 <title>Miasto</title>
 <link rel="stylesheet" href="css/glowny.css">
-<style>.klasa2{background-image:url("obrazy/miasto.jpg");}</style>
 <script>
 	window.onload=function(){
 
 
 	let targowisko = document.getElementById('gray');
 	
+	let karczma = document.getElementById('black');
+	
+	karczma.addEventListener('click', changeB);
+	
 	targowisko.addEventListener('click', changeA);
 
 	function changeB() {
 		srodek1 = document.getElementById('s1');
 		srodek2 = document.getElementById('s2');
+		srodek2 = document.getElementById('s3');
 
 		srodek2.style.display = "none";
 		srodek1.style.display = "block";
+		srodek3.style.display = "none";
 	}
 	
 	function changeA() {
 		srodek1 = document.getElementById('s1');
 		srodek2 = document.getElementById('s2');
+		srodek2 = document.getElementById('s3');
+		
 		srodek2.style.display = "block";
 		srodek1.style.display = "none";
+		srodek3.style.display = "none";
 	}
 
 	function changeC() {
 		srodek1 = document.getElementById('s1');
 		srodek2 = document.getElementById('s2');
-		srodek2.style.display = "block";
+		srodek2 = document.getElementById('s3');
+		
+		srodek2.style.display = "none";
 		srodek1.style.display = "none";
+		srodek3.style.display = "block";
 	}
 	
 	}
@@ -45,7 +56,11 @@
 		<div class="klasa1">
 		
 			<div class="button" id="karczma">Karczma</div>
+			
 			<input id="gray" value="Gray avg" type="button">
+			<input id="black" value="Gray avg" type="button">
+			<input id="white" value="Gray avg" type="button">
+			
 			<div class="button" id="targowisko">Targowisko</div>
 			<div class="button" id="kuznia">Kuźnia</div>
 			<div class="button" id="kuznia">Kuźnia</div>
@@ -55,10 +70,13 @@
 		
 		<div class="klasa2">
 			<div class="srodek1" id="s1">
-				<p>Info 1</p>
+				 Info 1
 			</div>
 			<div class="srodek2" id="s2">
-				<p>Info 2</p>
+				Info 2
+			</div>
+			<div class="srodek3" id="s3">
+				Info 3
 			</div>
 		</div>
 		

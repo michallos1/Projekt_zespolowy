@@ -20,9 +20,9 @@
 	height: 100%;
 	width: 68%;
 	background-color: #666;
-	/*background-image:url("../obrazy/karczma.jpg");*/
+	/*background-image:url("../obrazy/karczma.jpg");
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: cover;*/
 
 }
 
@@ -58,13 +58,25 @@
 }
 
 .klasa2 .srodek1{
-width: 100%;
-height: 100%;
-display: block;
+	width: 100%;
+	height: 100%;
+	display: block;
+	/*background-image:url("obrazy/miasto.jpg");*/
+	background-color: #00f;
 }
 
 .klasa2 .srodek2{
 	width: 100%;
 	height: 100%;
 	display: none;
+	background: url(obrazy/karczma.jpg) center/100% no-repeat;
+	background-color: #0f0;
+}
+
+.klasa2 .srodek3{
+	width: 100%;
+	height: 100%;
+	display: none;
+	background: url(obrazy/kuznia.jpg) center/100% no-repeat;
+	background-color: #f00;
 }
