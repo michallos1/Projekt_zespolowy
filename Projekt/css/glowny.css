@@ -52,12 +52,19 @@ body {
 	background-color:#100705;
 	color: #fff;
 
-
 }
+
 .klasa4 table{
 	border-spacing: 5px;
 	margin: 20px;
 	border: #fff 1px solid;
+}
+
+.klasa4 .naglowek_tabeli
+{
+		text-align:center;
+		font-size:18px;
+		text-decoration: underline;
 }
 
 .button 
