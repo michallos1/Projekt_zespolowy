@@ -30,7 +30,7 @@ body {
 .klasa2{
 	height: 100%;
 	width: 68%;
-	background-color: #666;
+	background-color: #100705;
 	/*background-image:url("../obrazy/karczma.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;*/
@@ -40,7 +40,7 @@ body {
 .klasa3{
 	height: 50%;
 	width: 20%;
-	background-color:#000;
+	background-color:#100705;
 	background-repeat: no-repeat;
 	background-size: auto;
 	padding-left:2px;
@@ -148,7 +148,7 @@ input[type="button"]:hover
 	height: 100%;
 	display: none;
 	background: url(../obrazy/kuznia.jpg) center/100% no-repeat;
-}
+	{}
 
 .wojownik
 {
