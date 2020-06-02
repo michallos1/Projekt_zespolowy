@@ -5,10 +5,14 @@
 <script src="script/klasy.js" defer></script>
 <script>
 	window.onload=function(){
-	var klasa ;
-	let wojownik = document.getElementById('wojownik');
+	var klasa;
+	let wojownik_w = document.getElementById('wojownik');
+	let lucznik_w = document.getElementById('lucznik');
+	let mag_w = document.getElementById('mag');
 	
-	wojownik.addEventListener('click', setWojownik);
+	wojownik_w.addEventListener('click', setWojownik);
+	lucznik_w.addEventListener('click', setLucznik);
+	mag_w.addEventListener('click', setMag);
 	
 	function setWojownik() {
 		tlo1 = document.getElementById('t1');
@@ -19,6 +23,7 @@
 		
 		var a=wojownik;
 		const wojo_s = new Wojownik();
+
 		klasa = wojo_s;
 		klasa.LevelUp();
 		klasa.Update_stats();
@@ -38,6 +43,7 @@
 		
 		var a=lucznik;
 		const lucz_s = new Lucznik();
+
 		klasa = lucz_s;
 		klasa.LevelUp();
 		klasa.Update_stats();
@@ -57,6 +63,7 @@
 		
 		var a=mag;
 		const mag_s = new Mag();
+
 		klasa = mag_s;
 		klasa.LevelUp();
 		klasa.Update_stats();
@@ -157,9 +164,13 @@
 	Upg_helm = document.getElementById('kuznia_akcja_5').addEventListener('click',UpgreadHelm);
 
 	function UpgreadWep(){
-		gold = klasa.gold;
-		if(gold>=10)
+		gold = klasa.Gold;
+		if(gold>=10){
 		klasa.Ekwipunek.Upgrade_wep();
+		klasa.Gold = gold - 10;
+		console.log(klasa.Gold);
+		console.log(klasa.Ekwipunek.Weapon);
+		}
 		else
 		alert('Za mało golda');
 
