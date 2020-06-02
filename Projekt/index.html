@@ -21,6 +21,7 @@
 		const wojo_s = new Wojownik();
 		klasa = wojo_s;
 		klasa.LevelUp();
+		setStats();
 	}
 	
 	let lucznik = document.getElementById('lucznik');
@@ -38,6 +39,7 @@
 		const lucz_s = new Lucznik();
 		klasa = lucz_s;
 		klasa.LevelUp();
+		setStats();
 	}
 	
 	let mag = document.getElementById('mag');
@@ -55,6 +57,7 @@
 		const mag_s = new Mag();
 		klasa = mag_s;
 		klasa.LevelUp();
+		setStats();
 	}
 
 
@@ -117,6 +120,24 @@
 		srodek1.style.display = "none";
 		srodek2.style.display = "none";
 		srodek3.style.display = "block";
+	}
+
+	function setStats(){
+		int = document.getElementById('tabela_int');
+		atak = document.getElementById('tabela_atak');
+		dex = document.getElementById('tabela_dex');
+		def = document.getElementById('tabela_def');
+		str = document.getElementById('tabela_str');
+		hp = document.getElementById('tabela_hp');
+		mana = document.getElementById('tabela_mana');
+
+		int.innerHTML = klasa.Int;
+		atak.innerHTML = klasa.Attack;
+		dex.innerHTML = klasa.Dex;
+		def.innerHTML = klasa.Def;
+		str.innerHTML = klasa.Str;
+		hp.innerHTML = klasa.Hp;
+		mana.innerHTML = klasa.Mana;
 	}
 	
 	}
