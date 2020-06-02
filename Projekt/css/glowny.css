@@ -54,6 +54,12 @@ body {
 	padding-left:20px;
 
 }
+.klasa4 .tabela_stats{
+	border-spacing: 5px;
+	
+	margin: 20px;
+	border: #fff 1px solid;
+}
 
 .button 
 {
