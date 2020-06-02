@@ -1,7 +1,4 @@
 
-
-const w=3,g=1,b=1,c=3,h=2; // ulepszenia eq
-
 const statywoj = [1,2,3]; // int  dex  str
 const statylucz = [1,3,2];
 const statymag = [3,2,1];
@@ -56,9 +53,6 @@ class Wojownik extends Klasa {
 		this.MaxMana = 10 + this.Int;
     }
     
-    Show(Ekwipunek){
-        console.log(this.Ekwipunek.Weapon);
-    }
 	
 }
 
@@ -130,27 +124,25 @@ class Eq {
 		this.Armor = 0;
     }
 
-    Upgrade_wep(w){
-        this.Weapon = w + this.Weapon;
+    Upgrade_wep(){
+        this.Weapon = 3 + this.Weapon;
     }
-    Upgrade_gl(g){
-        this.Glove = g + this.Glove;
+    Upgrade_gl(){
+        this.Glove = 1 + this.Glove;
     }
-    Upgrade_boots(b){
-        this.Boots = b + this.Boots;
+    Upgrade_boots(){
+        this.Boots = 1 + this.Boots;
     }
-    Upgrade_chest(c){
-        this.Chest = c + this.Chest;
+    Upgrade_chest(){
+        this.Chest = 3 + this.Chest;
     }
-    Upgrade_helm(h){
-        this.Helm = h + this.Helm;
+    Upgrade_helm(){
+        this.Helm = 2 + this.Helm;
     }
 	Set_armor(Glove,Boots,Chest,Helm){
 		this.Armor = this.Glove + this.Boots + this.Chest + this.Helm;
     }
     
-    Show_Wep(){
-        return this.Weapon;
-    }
+
 }
 

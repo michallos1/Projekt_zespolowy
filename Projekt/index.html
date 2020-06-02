@@ -21,7 +21,7 @@
 		tlo1.style.display = "none";
 		tlo.style.display = "flex";
 		
-		klasa3.style.background = "url(../obrazy/wojownik.jpg)";
+		//klasa3.style.background = "url(../obrazy/wojownik.jpg)";
 		
 		var a=wojownik;
 		const wojo_s = new Wojownik();
@@ -43,7 +43,7 @@
 		tlo1.style.display = "none";
 		tlo.style.display = "flex";
 		
-		klasa3.style.background = "url(../obrazy/lucznik.jpg)";
+		//klasa3.style.background = "url(../obrazy/lucznik.jpg)";
 		
 		var a=lucznik;
 		const lucz_s = new Lucznik();
@@ -65,7 +65,7 @@
 		tlo1.style.display = "none";
 		tlo.style.display = "flex";
 		
-		klasa3.style.background = "url(../obrazy/mag.jpg)";
+		//klasa3.style.background = "url(../obrazy/mag.jpg)";
 		
 		var a=mag;
 		const mag_s = new Mag();
@@ -186,8 +186,12 @@
 
 	function UpgreadChes(){
 		gold = klasa.gold;
-		if(gold>=7)
+		if(gold>=10){
 		klasa.Ekwipunek.Upgrade_chest();
+		klasa.Gold = gold - 10;
+		console.log(klasa.Gold);
+		console.log(klasa.Ekwipunek);
+		}
 		else
 		alert('Za mało golda');
 
@@ -197,8 +201,12 @@
 
 	function UpgreadBoots(){
 		gold = klasa.gold;
-		if(gold>=5)
-		klasa.Ekwipunek.Upgrade_boots();
+		if(gold>=5){
+		klasa.Ekwipunek.Upgrade_wep();
+		klasa.Gold = gold - 5;
+		console.log(klasa.Gold);
+		console.log(klasa.Ekwipunek);
+		}
 		else
 		alert('Za mało golda');
 
@@ -208,8 +216,12 @@
 
 	function UpgreadGlove(){
 		gold = klasa.gold;
-		if(gold>=5)
+		if(gold>=5){
 		klasa.Ekwipunek.Upgrade_gl();
+		klasa.Gold = gold - 5;
+		console.log(klasa.Gold);
+		console.log(klasa.Ekwipunek);
+		}
 		else
 		alert('Za mało golda');
 
@@ -219,8 +231,12 @@
 
 	function UpgreadHelm(){
 		gold = klasa.gold;
-		if(gold>=5)
+		if(gold>=6){
 		klasa.Ekwipunek.Upgrade_helm();
+		klasa.Gold = gold - 6;
+		console.log(klasa.Gold);
+		console.log(klasa.Ekwipunek);
+		}
 		else
 		alert('Za mało golda');
 
