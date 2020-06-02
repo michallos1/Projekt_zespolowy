@@ -54,9 +54,8 @@ body {
 
 
 }
-.klasa4 .tabela_stats{
+.klasa4 table{
 	border-spacing: 5px;
-	
 	margin: 20px;
 	border: #fff 1px solid;
 }

@@ -1,9 +1,9 @@
 
 const w=3,g=1,b=1,c=3,h=2;
 
-const statywoj[2]={1,2,3}; // int  dex  str
-const statylucz[2]={1,3,2};
-const statymag[2]={3,2,1};
+const statywoj = [1,2,3]; // int  dex  str
+const statylucz = [1,3,2];
+const statymag = [3,2,1];
 
 class Klasa {
     constructor(){
