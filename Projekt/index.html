@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
 <title>Miasto</title>
-<link rel="stylesheet" href="css/glowny.css">```
+<link rel="stylesheet" href="css/glowny.css">
 <script src="script/klasy.js" defer></script>
 <script>
 	window.onload=function(){
@@ -18,6 +18,8 @@
 		tlo.style.display = "flex";
 		
 		var a=wojownik;
+		const wojo_s = new Wojownik();
+		wojo_s.LevelUp();
 	}
 	
 	let lucznik = document.getElementById('lucznik');
@@ -32,6 +34,8 @@
 		tlo.style.display = "flex";
 		
 		var a=lucznik;
+		const lucz_s = new Lucznik();
+		lucz_s.LevelUp();
 	}
 	
 	let mag = document.getElementById('mag');
@@ -46,6 +50,8 @@
 		tlo.style.display = "flex";
 		
 		var a=mag;
+		const mag_s = new Mag();
+		mag_s.LevelUp();
 	}
 
 
