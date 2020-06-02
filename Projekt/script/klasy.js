@@ -96,7 +96,7 @@ class Mag extends Klasa {
     }
 	
 	Update_stats(Ekwipunek,Int,Dex,Str,Def,Mana,Attack){
-		this.Attack = this.Ekwipunek.Weapon + (this.int/2);
+		this.Attack = this.Ekwipunek.Weapon + (this.Int/2);
 		this.Def = this.Ekwipunek.Armor + (this.Str/2);
 		this.Hp = 30 + this.Str; 
 		this.Mana = 10 + this.Int;
