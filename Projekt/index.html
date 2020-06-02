@@ -185,7 +185,7 @@
 	}
 
 	function UpgreadChes(){
-		gold = klasa.gold;
+		gold = klasa.Gold;
 		if(gold>=10){
 		klasa.Ekwipunek.Upgrade_chest();
 		klasa.Gold = gold - 10;
@@ -200,9 +200,9 @@
 	}
 
 	function UpgreadBoots(){
-		gold = klasa.gold;
+		gold = klasa.Gold;
 		if(gold>=5){
-		klasa.Ekwipunek.Upgrade_wep();
+		klasa.Ekwipunek.Upgrade_boots();
 		klasa.Gold = gold - 5;
 		console.log(klasa.Gold);
 		console.log(klasa.Ekwipunek);
@@ -215,7 +215,7 @@
 	}
 
 	function UpgreadGlove(){
-		gold = klasa.gold;
+		gold = klasa.Gold;
 		if(gold>=5){
 		klasa.Ekwipunek.Upgrade_gl();
 		klasa.Gold = gold - 5;
@@ -230,7 +230,7 @@
 	}
 
 	function UpgreadHelm(){
-		gold = klasa.gold;
+		gold = klasa.Gold;
 		if(gold>=6){
 		klasa.Ekwipunek.Upgrade_helm();
 		klasa.Gold = gold - 6;
