@@ -138,7 +138,10 @@
 		def = document.getElementById('tabela_def');
 		str = document.getElementById('tabela_str');
 		hp = document.getElementById('tabela_hp');
-		mana = document.getElementById('tabela_mana');
+		mana = document.getElementById('tabela_mana1');
+		gold = document.getElementById('tabela_zloto');
+		exp = document.getElementById('tabela_exp1');
+		exp2 = document.getElementById('tabela_exp2');
 
 		int.innerHTML = klasa.Int;
 		atak.innerHTML = klasa.Attack;
@@ -147,8 +150,74 @@
 		str.innerHTML = klasa.Str;
 		hp.innerHTML = klasa.Hp;
 		mana.innerHTML = klasa.Mana;
+		gold.innerHTML = klasa.Gold;
+		exp.innerHTML = klasa.Exp;
+		exp2.innerHTML = klasa.ExpUp;
 	}
 	
+
+	Upg_wep = document.getElementById('kuznia_akcja_1').addEventListener('click',UpgreadWep);
+	Upg_zbr = document.getElementById('kuznia_akcja_2').addEventListener('click',UpgreadChes);
+	Upg_buty = document.getElementById('kuznia_akcja_3').addEventListener('click',UpgreadBoots);
+	Upg_rek = document.getElementById('kuznia_akcja_4').addEventListener('click',UpgreadGlove);
+	Upg_helm = document.getElementById('kuznia_akcja_5').addEventListener('click',UpgreadHelm);
+
+	function UpgreadWep(){
+		gold = klasa.gold;
+		if(gold>=10)
+		klasa.Ekwipunek.Upgrade_wep();
+		else
+		alert('Za mało golda');
+
+		klasa.Update_stats();
+		setStats();
+	}
+
+	function UpgreadChes(){
+		gold = klasa.gold;
+		if(gold>=7)
+		klasa.Ekwipunek.Upgrade_chest();
+		else
+		alert('Za mało golda');
+
+		klasa.Update_stats();
+		setStats();
+	}
+
+	function UpgreadBoots(){
+		gold = klasa.gold;
+		if(gold>=5)
+		klasa.Ekwipunek.Upgrade_boots();
+		else
+		alert('Za mało golda');
+
+		klasa.Update_stats();
+		setStats();
+	}
+
+	function UpgreadGlove(){
+		gold = klasa.gold;
+		if(gold>=5)
+		klasa.Ekwipunek.Upgrade_gl();
+		else
+		alert('Za mało golda');
+
+		klasa.Update_stats();
+		setStats();
+	}
+
+	function UpgreadHelm(){
+		gold = klasa.gold;
+		if(gold>=5)
+		klasa.Ekwipunek.Upgrade_helm();
+		else
+		alert('Za mało golda');
+
+		klasa.Update_stats();
+		setStats();
+	}
+
+
 	}
 </script>
 </head>
