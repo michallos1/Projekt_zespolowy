@@ -81,7 +81,6 @@ class Lucznik extends Klasa {
 		this.lvl += 1;
 		ExpToLvlUp();
     }
-	vvvvvvvvvvvvvvvvvvvvvvvvvvv
 	Update_stats(Ekwipunek,Int,Dex,Str,Def,Mana,Attack){
 		this.Attack = this.Ekwipunek.Weapon + (this.Dex/2);
 		this.Def = this.Ekwipunek.Armor+ (this.Str/2);
