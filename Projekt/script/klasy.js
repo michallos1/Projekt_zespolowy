@@ -1,6 +1,6 @@
 
 
-const wep_u=3,glov_u=1,boots_u=1,chest_u=3,helm_u=2; // ulepszenia eq
+const w=3,g=1,b=1,c=3,h=2; // ulepszenia eq
 
 const statywoj = [1,2,3]; // int  dex  str
 const statylucz = [1,3,2];
@@ -81,7 +81,6 @@ class Lucznik extends Klasa {
 		this.lvl += 1;
 		this.ExpToLvlUp();
     }
-	
 	Update_stats(Ekwipunek,Int,Dex,Str,Def,Mana,Attack){
 		this.Attack = this.Ekwipunek.Weapon + (this.Dex/2);
 		this.Def = this.Ekwipunek.Armor+ (this.Str/2);
@@ -131,24 +130,27 @@ class Eq {
 		this.Armor = 0;
     }
 
-    Upgrade_wep(wep_u){
-        this.Weapon = wep_u + this.Weapon;
+    Upgrade_wep(w){
+        this.Weapon = w + this.Weapon;
     }
-    Upgrade_gl(glov_u){
-        this.Glove = glov_u + this.Glove;
+    Upgrade_gl(g){
+        this.Glove = g + this.Glove;
     }
-    Upgrade_boots(boots_u){
-        this.Boots = boots_u + this.Boots;
+    Upgrade_boots(b){
+        this.Boots = b + this.Boots;
     }
-    Upgrade_chest(chest_u){
-        this.Chest = chest_u + this.Chest;
+    Upgrade_chest(c){
+        this.Chest = c + this.Chest;
     }
-    Upgrade_helm(helm_u){
-        this.Helm = helm_u + this.Helm;
+    Upgrade_helm(h){
+        this.Helm = h + this.Helm;
     }
 	Set_armor(Glove,Boots,Chest,Helm){
 		this.Armor = this.Glove + this.Boots + this.Chest + this.Helm;
     }
     
+    Show_Wep(){
+        return this.Weapon;
+    }
 }
 
