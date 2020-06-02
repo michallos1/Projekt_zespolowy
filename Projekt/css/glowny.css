@@ -61,6 +61,7 @@ body {
 	border-spacing: 5px;
 	margin: 20px;
 	border: #fff 1px solid;
+	width: 350px;
 }
 
 .klasa4 .naglowek_tabeli
@@ -70,9 +71,9 @@ body {
 		text-decoration: underline;
 }
 
-.klasa4 .center
+.klasa4 .right
 {
-		text-align:center;
+		text-align:right;
 }
 
 .klasa1 input[type="button"]
