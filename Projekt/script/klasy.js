@@ -33,6 +33,42 @@ class Wojownik extends Klasa {
     }
 }
 
+class Lucznik extends Klasa {
+    constructor(){
+        this.Hp = 0;
+        this.Def = 0;
+        this.Mana = 0;
+        this.Attack = 0;
+        this.Ekwipunek = Eq;
+        this.Level = 0;
+        this.Backpack = new Array[12];
+    }
+
+    LevelUp(Int,Dex,Str){
+        this.Int = this.Int + Int;
+        this.Def = this.Def + Dex;
+        this.Str = this.Str + Str;
+    }
+}
+
+class Mag extends Klasa {
+    constructor(){
+        this.Hp = 0;
+        this.Def = 0;
+        this.Mana = 0;
+        this.Attack = 0;
+        this.Ekwipunek = Eq;
+        this.Level = 0;
+        this.Backpack = new Array[12];
+    }
+
+    LevelUp(Int,Dex,Str){
+        this.Int = this.Int + Int;
+        this.Def = this.Def + Dex;
+        this.Str = this.Str + Str;
+    }
+}
+
 
 
 class Eq {
