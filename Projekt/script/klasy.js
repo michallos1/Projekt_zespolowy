@@ -29,7 +29,7 @@ class Klasa {
 class Wojownik extends Klasa {
     constructor(){
         super();
-        this.Hp = 0;
+        this.Hp = 30;
         this.Def = 0;
         this.Mana = 0;
         this.Attack = 0;
@@ -59,9 +59,9 @@ class Wojownik extends Klasa {
 class Lucznik extends Klasa {
     constructor(){
         super();
-        this.Hp = 0;
+        this.Hp = 25;
         this.Def = 0;
-        this.Mana = 0;
+        this.Mana = 15;
         this.Attack = 0;
         this.Ekwipunek = new Eq();
         this.Level = 0;
@@ -78,7 +78,7 @@ class Lucznik extends Klasa {
 	Update_stats(Ekwipunek,Int,Dex,Str,Def,Mana,Attack){
 		this.Attack = this.Ekwipunek.Weapon + (this.Dex/2);
 		this.Def = this.Ekwipunek.Armor+ (this.Str/2);
-		this.MaxHp = 30 + this.Str; 
+		this.MaxHp = 25 + this.Str; 
 		this.MaxMana = 10 + this.Int;
     }
     
@@ -87,9 +87,9 @@ class Lucznik extends Klasa {
 class Mag extends Klasa {
     constructor(){
         super();
-        this.Hp = 0;
+        this.Hp = 20;
         this.Def = 0;
-        this.Mana = 0;
+        this.Mana = 30;
         this.Attack = 0;
         this.Ekwipunek = new Eq();
         this.Level = 0;
@@ -107,8 +107,8 @@ class Mag extends Klasa {
 	Update_stats(Ekwipunek,Int,Dex,Str,Def,Mana,Attack){
 		this.Attack = this.Ekwipunek.Weapon + (this.Int/2);
 		this.Def = this.Ekwipunek.Armor + (this.Str/2);
-		this.MaxHp = 30 + this.Str; 
-		this.MaxMana = 10 + this.Int;
+		this.MaxHp = 20 + this.Str; 
+		this.MaxMana = 30 + this.Int;
 	}
 }
 
