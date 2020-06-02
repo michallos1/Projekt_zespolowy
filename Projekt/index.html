@@ -5,7 +5,7 @@
 <script src="script/klasy.js" defer></script>
 <script>
 	window.onload=function(){
-
+	var klasa ;
 	let wojownik = document.getElementById('wojownik');
 	
 	wojownik.addEventListener('click', setWojownik);
@@ -19,7 +19,8 @@
 		
 		var a=wojownik;
 		const wojo_s = new Wojownik();
-		wojo_s.LevelUp();
+		klasa = wojo_s;
+		klasa.LevelUp();
 	}
 	
 	let lucznik = document.getElementById('lucznik');
@@ -35,7 +36,8 @@
 		
 		var a=lucznik;
 		const lucz_s = new Lucznik();
-		lucz_s.LevelUp();
+		klasa = lucz_s;
+		klasa.LevelUp();
 	}
 	
 	let mag = document.getElementById('mag');
@@ -51,7 +53,8 @@
 		
 		var a=mag;
 		const mag_s = new Mag();
-		mag_s.LevelUp();
+		klasa = mag_s;
+		klasa.LevelUp();
 	}
 
 
