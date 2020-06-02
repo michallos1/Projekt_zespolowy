@@ -127,7 +127,6 @@ input[type="button"]:hover
 	height: 100%;
 	display: block;
 	background: url(../obrazy/miasto.jpg) center/100% no-repeat;
-	background-color: #fff;
 }
 
 .klasa2 .srodek1{
@@ -135,7 +134,6 @@ input[type="button"]:hover
 	height: 100%;
 	display: none;
 	background: url(../obrazy/karczma.jpg) center/100% no-repeat;
-	background-color: #00f;
 }
 
 .klasa2 .srodek2{
@@ -143,7 +141,6 @@ input[type="button"]:hover
 	height: 100%;
 	display: none;
 	background: url(../obrazy/targowisko.jpg) center/100% no-repeat;
-	background-color: #0f0;
 }
 
 .klasa2 .srodek3{
@@ -151,7 +148,6 @@ input[type="button"]:hover
 	height: 100%;
 	display: none;
 	background: url(../obrazy/kuznia.jpg) center/100% no-repeat;
-	background-color: #f00;
 }
 
 .wojownik
