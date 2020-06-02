@@ -40,15 +40,19 @@ body {
 .klasa3{
 	height: 50%;
 	width: 20%;
-	background-color:#f66;
+	background-color:#000;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: auto;
+	padding-left:2px;
 }
 
 .klasa4{
 	height: 50%;
 	width: 20%;
 	background-color:#100705;
+	color: #fff;
+	padding-left:20px;
+
 }
 
 .button 
@@ -138,7 +142,7 @@ input[type="button"]:hover
 	margin-top:5%;
 	margin-left:5%;
 	width:25%;
-	height: 70%;
+	height: 72%;
 	background-color: #a00;
 	float: left;
 }
@@ -148,7 +152,7 @@ input[type="button"]:hover
 	margin-top:5%;
 	margin-left:7%;
 	width:25%;
-	height: 70%;
+	height: 72%;
 	background-color: #0a0;
 	float: left;
 }
@@ -158,7 +162,7 @@ input[type="button"]:hover
 	margin-top:5%;
 	margin-left:7%;
 	width:25%;
-	height: 70%;
+	height: 72%;
 	background-color: #00a;
 	float: left;
 }
