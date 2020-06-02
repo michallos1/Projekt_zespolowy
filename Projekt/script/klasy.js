@@ -1,7 +1,5 @@
 
 const w=3,g=1,b=1,c=3,h=2;
-window.onload=function(){
-
 
 class Klasa {
     constructor(){
@@ -66,4 +64,4 @@ class Eq {
 		this.Armor = this.Glove + this.Boots + this.Chest + this.Helm;
 	}
 }
-}
+
