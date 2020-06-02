@@ -69,8 +69,8 @@ class Lucznik extends Klasa {
     }
 	
 	Update_stats(Ekwipunek,Int,Dex,Str,Def,Mana,Attack){
-		this.Attack = Ekwipunek.Weapon + (this.Dex/2);
-		this.Def = Ekwipunek.Armor+ (this.Str/2);
+		this.Attack = this.Ekwipunek.Weapon + (this.Dex/2);
+		this.Def = this.Ekwipunek.Armor+ (this.Str/2);
 		this.Hp = 30 + this.Str; 
 		this.Mana = 10 + this.Int;
     }
@@ -96,8 +96,8 @@ class Mag extends Klasa {
     }
 	
 	Update_stats(Ekwipunek,Int,Dex,Str,Def,Mana,Attack){
-		this.Attack = Ekwipunek.Weapon + (this.int/2);
-		this.Def = Ekwipunek.Armor + (this.Str/2);
+		this.Attack = this.Ekwipunek.Weapon + (this.int/2);
+		this.Def = this.Ekwipunek.Armor + (this.Str/2);
 		this.Hp = 30 + this.Str; 
 		this.Mana = 10 + this.Int;
 	}
