@@ -1,4 +1,5 @@
 
+
 const w=3,g=1,b=1,c=3,h=2; // ulepszenia eq
 
 const statywoj = [1,2,3]; // int  dex  str
@@ -7,6 +8,11 @@ const statymag = [3,2,1];
 
 class Klasa {
     constructor(){
+		this.MaxHp = 0;
+		this.MaxMana = 0;
+		this.Lvl = 0;
+		this.Exp = 0;
+		this.ExpUp = 10
         this.Int = 0;
         this.Dex = 0;
         this.Str = 0;
@@ -15,6 +21,10 @@ class Klasa {
 
      LevelUp(Int,Dex,Str) { 
     }
+
+	ExpToLvlUp(Lvl,Exp,ExpUp){
+		this.ExpUp = this.Exp + 10 + (this.Lvl * this.Lvl);
+	}
 
 }
 
@@ -35,13 +45,14 @@ class Wojownik extends Klasa {
         this.Int = this.Int + statywoj[0];
         this.Dex = this.Dex + statywoj[1];
         this.Str = this.Str + statywoj[2];
+		this.lvl += 1;
     }
 	
 	Update_stats(Ekwipunek,Int,Dex,Str,Def,Mana,Attack){
 		this.Attack = this.Ekwipunek.Weapon + (this.Str/3);
 		this.Def = this.Ekwipunek.Armor + (this.Str/2);
-		this.Hp = 30 + this.Str; 
-		this.Mana = 10 + this.Int;
+		this.MaxHp = 30 + this.Str; 
+		this.MaxMana = 10 + this.Int;
     }
     
     Show(Ekwipunek){
@@ -66,13 +77,14 @@ class Lucznik extends Klasa {
         this.Int = this.Int + statylucz[0];
         this.Dex = this.Dex + statylucz[1];
         this.Str = this.Str + statylucz[2];
+		this.lvl += 1;
     }
 	
 	Update_stats(Ekwipunek,Int,Dex,Str,Def,Mana,Attack){
 		this.Attack = this.Ekwipunek.Weapon + (this.Dex/2);
 		this.Def = this.Ekwipunek.Armor+ (this.Str/2);
-		this.Hp = 30 + this.Str; 
-		this.Mana = 10 + this.Int;
+		this.MaxHp = 30 + this.Str; 
+		this.MaxMana = 10 + this.Int;
     }
     
 }
@@ -93,13 +105,14 @@ class Mag extends Klasa {
         this.Int = this.Int + statymag[0];
         this.Dex = this.Dex + statymag[1];
         this.Str = this.Str + statymag[2];
+		this.lvl += 1;
     }
 	
 	Update_stats(Ekwipunek,Int,Dex,Str,Def,Mana,Attack){
 		this.Attack = this.Ekwipunek.Weapon + (this.Int/2);
 		this.Def = this.Ekwipunek.Armor + (this.Str/2);
-		this.Hp = 30 + this.Str; 
-		this.Mana = 10 + this.Int;
+		this.MaxHp = 30 + this.Str; 
+		this.MaxMana = 10 + this.Int;
 	}
 }
 

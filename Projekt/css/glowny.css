@@ -70,7 +70,10 @@ body {
 		text-decoration: underline;
 }
 
-
+.klasa4 .center
+{
+		text-align:center;
+}
 
 .klasa1 input[type="button"]
 {
