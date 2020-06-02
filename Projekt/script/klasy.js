@@ -1,6 +1,10 @@
 
 const w=3,g=1,b=1,c=3,h=2;
 
+const statywoj[2]={1,2,3}; // int  dex  str
+const statylucz[2]={1,3,2};
+const statymag[2]={3,2,1};
+
 class Klasa {
     constructor(){
         this.Int = 0;
@@ -27,9 +31,9 @@ class Wojownik extends Klasa {
     }
 
     LevelUp(Int,Dex,Str){
-        this.Int = this.Int + Int;
-        this.Def = this.Def + Dex;
-        this.Str = this.Str + Str;
+        this.Int = this.Int + statywoj[0];
+        this.Def = this.Def + statywoj[1];
+        this.Str = this.Str + statywoj[2];
     }
 }
 
@@ -41,7 +45,7 @@ class Eq {
         this.Glove = 0;
         this.Boots = 0;
         this.Chest = 0;
-        this.Helmet = 0;
+        this.Helm = 0;
 		this.Armor = 0;
     }
 
@@ -60,7 +64,7 @@ class Eq {
     Upgrade_helm(h){
         this.Helm = h + this.Helm;
     }
-	Set_armor(Glove,Boots,Chest,Helmet){
+	Set_armor(Glove,Boots,Chest,Helm){
 		this.Armor = this.Glove + this.Boots + this.Chest + this.Helm;
 	}
 }
