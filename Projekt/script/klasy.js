@@ -33,7 +33,7 @@ class Wojownik extends Klasa {
 
     LevelUp(Int,Dex,Str){
         this.Int = this.Int + statywoj[0];
-        this.Def = this.Def + statywoj[1];
+        this.Dex = this.Dex + statywoj[1];
         this.Str = this.Str + statywoj[2];
     }
 	
@@ -64,7 +64,7 @@ class Lucznik extends Klasa {
 
     LevelUp(Int,Dex,Str){
         this.Int = this.Int + statylucz[0];
-        this.Def = this.Def + statylucz[1];
+        this.Dex = this.Dex + statylucz[1];
         this.Str = this.Str + statylucz[2];
     }
 	
@@ -91,7 +91,7 @@ class Mag extends Klasa {
 
     LevelUp(Int,Dex,Str){
         this.Int = this.Int + statymag[0];
-        this.Def = this.Def + statymag[1];
+        this.Dex = this.Dex + statymag[1];
         this.Str = this.Str + statymag[2];
     }
 	
