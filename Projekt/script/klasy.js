@@ -1,5 +1,5 @@
 
-const w=3,g=1,b=1,c=3,h=2;
+const w=3,g=1,b=1,c=3,h=2; // ulepszenia eq
 
 const statywoj = [1,2,3]; // int  dex  str
 const statylucz = [1,3,2];
@@ -36,6 +36,14 @@ class Wojownik extends Klasa {
         this.Def = this.Def + statywoj[1];
         this.Str = this.Str + statywoj[2];
     }
+	
+	Update_stats(Ekwipunek,Int,Dex,Str,Def,Mana,Attack){
+		this.Attack = Ekwipunek.Weapon + (this.Str/3);
+		this.Def = Ekwipunek.Armor + (this.Str/2);
+		this.Hp = 30 + this.Str; 
+		this.Mana = 10 + this.Int;
+	}
+	
 }
 
 class Lucznik extends Klasa {
@@ -51,10 +59,17 @@ class Lucznik extends Klasa {
     }
 
     LevelUp(Int,Dex,Str){
-        this.Int = this.Int + Int;
-        this.Def = this.Def + Dex;
-        this.Str = this.Str + Str;
+        this.Int = this.Int + statylucz[0];
+        this.Def = this.Def + statylucz[1];
+        this.Str = this.Str + statylucz[2];
     }
+	
+	Update_stats(Ekwipunek,Int,Dex,Str,Def,Mana,Attack){
+		this.Attack = Ekwipunek.Weapon + (this.Dex/2);
+		this.Def = Ekwipunek.Armor + (this.Str/2);
+		this.Hp = 30 + this.Str; 
+		this.Mana = 10 + this.Int;
+	}
 }
 
 class Mag extends Klasa {
@@ -70,10 +85,17 @@ class Mag extends Klasa {
     }
 
     LevelUp(Int,Dex,Str){
-        this.Int = this.Int + Int;
-        this.Def = this.Def + Dex;
-        this.Str = this.Str + Str;
+        this.Int = this.Int + statymag[0];
+        this.Def = this.Def + statymag[1];
+        this.Str = this.Str + statymag[2];
     }
+	
+	Update_stats(Ekwipunek,Int,Dex,Str,Def,Mana,Attack){
+		this.Attack = Ekwipunek.Weapon + (this.int/2);
+		this.Def = Ekwipunek.Armor + (this.Str/2);
+		this.Hp = 30 + this.Str; 
+		this.Mana = 10 + this.Int;
+	}
 }
 
 
