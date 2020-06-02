@@ -148,7 +148,7 @@ input[type="button"]:hover
 	height: 100%;
 	display: none;
 	background: url(../obrazy/kuznia.jpg) center/100% no-repeat;
-	{}
+}
 
 .wojownik
 {
