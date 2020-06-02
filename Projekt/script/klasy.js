@@ -21,13 +21,14 @@ class Klasa {
 
 class Wojownik extends Klasa {
     constructor(){
+        super();
         this.Hp = 0;
         this.Def = 0;
         this.Mana = 0;
         this.Attack = 0;
         this.Ekwipunek = Eq;
         this.Level = 0;
-        this.Backpack = new Array[12];
+        this.Backpack = new Array(12);
     }
 
     LevelUp(Int,Dex,Str){
@@ -47,13 +48,14 @@ class Wojownik extends Klasa {
 
 class Lucznik extends Klasa {
     constructor(){
+        super();
         this.Hp = 0;
         this.Def = 0;
         this.Mana = 0;
         this.Attack = 0;
         this.Ekwipunek = Eq;
         this.Level = 0;
-        this.Backpack = new Array[12];
+        this.Backpack = new Array(12);
     }
 
     LevelUp(Int,Dex,Str){
@@ -72,13 +74,14 @@ class Lucznik extends Klasa {
 
 class Mag extends Klasa {
     constructor(){
+        super();
         this.Hp = 0;
         this.Def = 0;
         this.Mana = 0;
         this.Attack = 0;
         this.Ekwipunek = Eq;
         this.Level = 0;
-        this.Backpack = new Array[12];
+        this.Backpack = new Array(12);
     }
 
     LevelUp(Int,Dex,Str){
