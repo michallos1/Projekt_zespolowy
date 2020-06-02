@@ -40,10 +40,13 @@ body {
 .klasa3{
 	height: 50%;
 	width: 20%;
+
+}
+
+.klasa3 img{
 	background-color:#100705;
 	background-repeat: no-repeat;
 	background-size: auto;
-	padding-left:2px;
 }
 
 .klasa4{
