@@ -53,7 +53,7 @@ class Lucznik extends Klasa {
         this.Def = 0;
         this.Mana = 0;
         this.Attack = 0;
-        this.Ekwipunek = Eq;
+        this.Ekwipunek = new Eq();
         this.Level = 0;
         this.Backpack = new Array(12);
     }
@@ -66,10 +66,11 @@ class Lucznik extends Klasa {
 	
 	Update_stats(Ekwipunek,Int,Dex,Str,Def,Mana,Attack){
 		this.Attack = Ekwipunek.Weapon + (this.Dex/2);
-		this.Def = Ekwipunek.Armor + (this.Str/2);
+		this.Def = Ekwipunek.Armor+ (this.Str/2);
 		this.Hp = 30 + this.Str; 
 		this.Mana = 10 + this.Int;
-	}
+    }
+    
 }
 
 class Mag extends Klasa {
@@ -127,6 +128,10 @@ class Eq {
     }
 	Set_armor(Glove,Boots,Chest,Helm){
 		this.Armor = this.Glove + this.Boots + this.Chest + this.Helm;
-	}
+    }
+    
+    Show_Wep(){
+        console.log(this.Weapon);
+    }
 }
 
