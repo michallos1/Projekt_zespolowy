@@ -78,13 +78,13 @@
             let karczma = document.getElementById('karczma');
             let miasto = document.getElementById('miasto');
             let kuznia = document.getElementById('kuznia');
-			let walka = document.getElementById('walka');
+            let walka = document.getElementById('walka');
 
             miasto.addEventListener('click', setMiasto);
             karczma.addEventListener('click', setKarczma);
             targowisko.addEventListener('click', setTargowisko);
             kuznia.addEventListener('click', setKuznia);
-			walka.addEventListener('click', setWalka);
+            walka.addEventListener('click', setWalka);
 
 
 
@@ -143,18 +143,18 @@
                 walka.style.display = "none";
                 srodek3.style.display = "block";
             }
-			
-			function setWalka() {
+
+            function setWalka() {
                 srodek0 = document.getElementById('s0');
                 srodek1 = document.getElementById('s1');
                 srodek2 = document.getElementById('s2');
                 srodek3 = document.getElementById('s3');
-				walka = document.getElementById('w');
+                walka = document.getElementById('w');
 
                 srodek0.style.display = "none";
                 srodek1.style.display = "none";
                 srodek2.style.display = "none";
-				walka.style.display = "block";
+                walka.style.display = "block";
                 srodek3.style.display = "none";
             }
 
@@ -200,7 +200,7 @@
 
             }
 
-            MisjaI = document.getElementById('karczma_akcja_1').addEventListener('click', Misja1);
+            MisjaI = document.getElementById('walka').addEventListener('click', Misja1);
             MisjaII = document.getElementById('karczma_akcja_2').addEventListener('click', Misja2);
 
             Upg_wep = document.getElementById('kuznia_akcja_1').addEventListener('click', UpgreadWep);
@@ -351,10 +351,10 @@
                 }
             }
 
-            let min_hp_use = document.getElementById('miasto_akcja_1').addEventListener('click', );
-            let max_hp_use = document.getElementById('miasto_akcja_2').addEventListener('click', );
-            let min_mp_use = document.getElementById('miasto_akcja_3').addEventListener('click', );
-            let max_mp_use = document.getElementById('miasto_akcja_4').addEventListener('click', );
+            let min_hp_use = document.getElementById('miasto_akcja_1').addEventListener('click', use_potion);
+            let max_hp_use = document.getElementById('miasto_akcja_2').addEventListener('click', use_potion);
+            let min_mp_use = document.getElementById('miasto_akcja_3').addEventListener('click', use_potion);
+            let max_mp_use = document.getElementById('miasto_akcja_4').addEventListener('click', use_potion);
 
             function use_potion(event) {
 
@@ -363,6 +363,30 @@
                         klasa.Hp = +10;
                     } else {
                         klasa.Hp = klasa.MaxHp;
+                    }
+                }
+
+                if (event.target.id == 'miasto_akcja_2') {
+                    if (klasa.MaxHp - klasa.Hp >= 30) {
+                        klasa.Hp = +30;
+                    } else {
+                        klasa.Hp = klasa.MaxHp;
+                    }
+                }
+
+                if (event.target.id == 'miasto_akcja_3') {
+                    if (klasa.MaxMana - klasa.Mana >= 10) {
+                        klasa.Mana = +10;
+                    } else {
+                        klasa.Mana = klasa.MaxMana;
+                    }
+                }
+
+                if (event.target.id == 'miasto_akcja_4') {
+                    if (klasa.MaxMana - klasa.Mana >= 10) {
+                        klasa.Mana = +10;
+                    } else {
+                        klasa.Mana = klasa.MaxMana;
                     }
                 }
             }
@@ -422,7 +446,7 @@
                     <input id="miasto_akcja_4" value="Uzyj mikstury na MP duża" type="button">
 
                 </div>
-				
+
 
 
                 <div class="walka" id="w">
