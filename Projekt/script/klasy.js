@@ -51,7 +51,7 @@ class Wojownik extends Klasa {
     }
 
     Update_backpack(slot, type) {
-        curent = this.Backpack[slot];
+        let curent = this.Backpack[slot];
 
         if (type == 'add') {
             this.Backpack[slot] = +1;
