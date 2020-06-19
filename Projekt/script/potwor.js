@@ -10,19 +10,15 @@ class potwor {
         this.Atk += lvl;
         this.Def += (1 / 3) * lvl;
     }
-
-
-};
-
-function walka(Klasa) {
-    p = ustaw(Klasa.lvl);
+	walka(Klasa) {
     do {
-        p.Hp -= (Klasa.Attack - p.Def);
-        Klasa.Hp -= (p.Atk - Klasa.Def);
-    } while (Klasa.Hp > 0 && p.Hp > 0);
+        this.Hp -= (Klasa.Attack - this.Def);
+        Klasa.Hp -= (this.Atk - Klasa.Def);
+    } while (Klasa.Hp > 0 && this.Hp > 0);
 
-    if (p.Hp < 1)
+    if (this.Hp < 1)
         return 1; //wygrana walka 
 
     return 0; // przegrana walka	
-}
+	}
+};
