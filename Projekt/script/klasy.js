@@ -39,7 +39,7 @@ class Wojownik extends Klasa {
         this.Int = this.Int + statywoj[0];
         this.Dex = this.Dex + statywoj[1];
         this.Str = this.Str + statywoj[2];
-        this.lvl += 1;
+        this.Lvl += 1;
         this.ExpToLvlUp();
     }
 
@@ -81,7 +81,7 @@ class Lucznik extends Klasa {
         this.Int = this.Int + statylucz[0];
         this.Dex = this.Dex + statylucz[1];
         this.Str = this.Str + statylucz[2];
-        this.lvl += 1;
+        this.Lvl += 1;
         this.ExpToLvlUp();
     }
     Update_stats(Ekwipunek, Int, Dex, Str, Def, Mana, Attack) {
@@ -108,7 +108,7 @@ class Mag extends Klasa {
         this.Int = this.Int + statymag[0];
         this.Dex = this.Dex + statymag[1];
         this.Str = this.Str + statymag[2];
-        this.lvl += 1;
+        this.Lvl += 1;
         this.ExpToLvlUp();
     }
 
