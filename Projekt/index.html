@@ -88,12 +88,14 @@
             let miasto = document.getElementById('miasto');
             let kuznia = document.getElementById('kuznia');
             let walka = document.getElementById('walka');
+			let walka1 = document.getElementById('walka1');
 
             miasto.addEventListener('click', setMiasto);
             karczma.addEventListener('click', setKarczma);
             targowisko.addEventListener('click', setTargowisko);
             kuznia.addEventListener('click', setKuznia);
             walka.addEventListener('click', setWalka);
+			walka1.addEventListener('click', setWalka);
 
 
 
@@ -213,8 +215,8 @@
 
             Atak = document.getElementById('walka_akcja_1').addEventListener('click', Atakuj);
 
-
-            Misja = document.getElementById('walka').addEventListener('click', Misja);
+            Misja1 = document.getElementById('walka').addEventListener('click', Misja1);
+			Misja2 = document.getElementById('walka1').addEventListener('click', Misja2);
 
             Upg_wep = document.getElementById('kuznia_akcja_1').addEventListener('click', UpgreadWep);
             Upg_zbr = document.getElementById('kuznia_akcja_2').addEventListener('click', UpgreadChes);
@@ -229,7 +231,30 @@
             }
 
 
-            function Misja() {
+            function Misja1() {
+                let level = klasa.Lvl;
+                setWalka();
+                console.log('Level postaci: ' + level);
+                p.ustaw(level);
+
+                /* if (p.walka(klasa) == 1) {
+                     console.log(klasa.Gold);
+                     console.log(klasa.Exp);
+                     klasa.Gold += (klasa.Lvl * 6) + klasa.Dex;
+                     klasa.Exp += klasa.Lvl + klasa.Int;
+                     alert('Misja zakończona powodzeniem!');
+                     if (klasa.Exp > klasa.ExpUp) {
+                         klasa.LevelUp();
+                     }
+                     setStats();
+                 } else {
+                     alert('Poległeś w walce z potworem.');
+                     klasa.Hp = 1;
+                     setStats();
+                 }*/
+            }
+			
+			function Misja2() {
                 let level = klasa.Lvl;
                 setWalka();
                 console.log('Level postaci: ' + level);
@@ -500,7 +525,7 @@
                     <!-- KARCZMA -->
 
                     <input id="walka" value="Misja 1" type="button">
-                    <input id="karczma_akcja_2" value="Misja 2" type="button">
+                    <input id="walka1" value="Misja 2" type="button">
                     <input id="karczma_akcja_3" value="Misja 3" type="button">
                     <input id="karczma_akcja_4" value="Misja 4" type="button">
 
