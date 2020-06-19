@@ -6,7 +6,7 @@ class potwor {
 	}
 }
 
-walka (class Klasa){
+walka (Klasa){
 	potwor p;
 	p = ustaw(Klasa.lvl);
 	
