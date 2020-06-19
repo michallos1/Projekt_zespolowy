@@ -167,7 +167,7 @@
                 gold.innerHTML = klasa.Gold;
                 exp.innerHTML = klasa.Exp;
                 exp2.innerHTML = klasa.ExpUp;
-                hp2.innerHTML = klasa.MaxHp;
+
                 //mikstury
                 min_hp.innerHTML = klasa.Backpack[0];
                 max_hp.innerHTML = klasa.Backpack[1];
@@ -207,7 +207,7 @@
             }
 
             function Misja2() {
-               let level = klasa.Lvl;
+                let level = klasa.Lvl;
                 console.log('Level postaci: ' + level);
                 p.ustaw(level);
                 if (p.walka(klasa) == 1) {
@@ -383,16 +383,16 @@
                     <input id="miasto_akcja_4" value="Uzyj mikstury na MP duża" type="button">
 
                 </div>
-				
-				<div class="walka" id="w">
-					<!-- WALKA -->
-					
-					<input id="walka_akcja_1" value="Atakuj" type="button">
+
+                <div class="walka" id="w">
+                    <!-- WALKA -->
+
+                    <input id="walka_akcja_1" value="Atakuj" type="button">
                     <input id="walka_akcja_2" value="Mikstura życia" type="button">
                     <input id="walka_akcja_3" value="Miktura many" type="button">
                     <input id="walka_akcja_4" value="Uciekaj" type="button">
-				</div>
-				
+                </div>
+
 
                 <div class="srodek1" id="s1">
                     <!-- KARCZMA -->
@@ -442,44 +442,44 @@
                     </tr>
                     <tr>
                         <td>Poziom</td>
-                        <td id="tabela_lvl">1</td>
+                        <td id="tabela_lvl"></td>
                         <td>|</td>
                         <td>Doświadczenie</td>
-                        <td id="tabela_exp1">1</td>
+                        <td id="tabela_exp1"></td>
                         <td>/</td>
-                        <td id="tabela_exp2">1</td>
+                        <td id="tabela_exp2"></td>
                     </tr>
                     <tr>
                         <td>Atak</td>
-                        <td id="tabela_atak">1</td>
+                        <td id="tabela_atak"></td>
                         <td>|</td>
                         <td>Obrona</td>
-                        <td colspan="3" id="tabela_def">1</td>
+                        <td colspan="3" id="tabela_def"></td>
                     </tr>
                     <tr>
                         <td>Zręczność</td>
-                        <td id="tabela_dex">1</td>
+                        <td id="tabela_dex"></td>
                         <td>|</td>
                         <td>Punkty życia</td>
-                        <td id="tabela_hp">1</td>
+                        <td id="tabela_hp"></td>
                         <td>/</td>
-                        <td id="tabela_hp2">1</td>
+                        <td id="tabela_hp2"></td>
                     </tr>
                     <tr>
                         <td>Siła</td>
-                        <td id="tabela_str">1</td>
+                        <td id="tabela_str"></td>
                         <td>|</td>
                         <td>Punkty many</td>
-                        <td id="tabela_mana1">1</td>
+                        <td id="tabela_mana1"></td>
                         <td>/</td>
-                        <td id="tabela_mana2">1</td>
+                        <td id="tabela_mana2"></td>
                     </tr>
                     <tr>
                         <td>Inteligencja</td>
-                        <td id="tabela_int">1</td>
+                        <td id="tabela_int"></td>
                         <td>|</td>
                         <td>Złoto</td>
-                        <td colspan="3" id="tabela_zloto">1</td>
+                        <td colspan="3" id="tabela_zloto"></td>
                     </tr>
                 </table>
 
