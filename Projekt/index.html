@@ -333,7 +333,22 @@
                     klasa.Update_backpack(slot, 'add');
                     document.getElementById('max_mp').innerHTML = klasa.Backpack[3];
                 }
+            }
 
+            let min_hp_use = document.getElementById('miasto_akcja_1').addEventListener('click', );
+            let max_hp_use = document.getElementById('miasto_akcja_2').addEventListener('click', );
+            let min_mp_use = document.getElementById('miasto_akcja_3').addEventListener('click', );
+            let max_mp_use = document.getElementById('miasto_akcja_4').addEventListener('click', );
+
+            function use_potion(event) {
+
+                if (event.target.id == 'miasto_akcja_1') {
+                    if (klasa.MaxHp - klasa.Hp >= 10) {
+                        klasa.Hp = +10;
+                    } else {
+                        klasa.Hp = klasa.MaxHp;
+                    }
+                }
             }
 
         }
