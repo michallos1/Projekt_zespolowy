@@ -13,11 +13,13 @@ class potwor {
 	walka(Klasa) {
     do {
         this.Hp -= (Klasa.Attack - this.Def);
-        Klasa.Hp -= (this.Atk - Klasa.Def);
-    } while (Klasa.Hp > 0 && this.Hp > 0);
-
-    if (this.Hp < 1)
+		console.log(this.hp);
+		if (this.Hp < 1)
         return 1; //wygrana walka 
+		
+        Klasa.Hp -= (this.Atk - Klasa.Def);
+		console.log(Klasa.hp);
+    } while (Klasa.Hp >0);
 
     return 0; // przegrana walka	
 	}
