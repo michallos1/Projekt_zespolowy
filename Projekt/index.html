@@ -247,38 +247,39 @@
                 setStats();
             }
 
-            let min_hp = document.getElementById('min_hp').addEventListener('click', Update_backpack);
-            let max_hp = document.getElementById('max_hp').addEventListener('click', Update_backpack);
-            let min_mp = document.getElementById('min_mp').addEventListener('click', Update_backpack);
-            let max_mp = document.getElementById('max_mp').addEventListener('click', Update_backpack);
+            let min_hp = document.getElementById('targowisko_akcja_1').addEventListener('click', Update_backpack);
+            let max_hp = document.getElementById('targowisko_akcja_2').addEventListener('click', Update_backpack);
+            let min_mp = document.getElementById('targowisko_akcja_3').addEventListener('click', Update_backpack);
+            let max_mp = document.getElementById('targowisko_akcja_4').addEventListener('click', Update_backpack);
 
 
             function Update_backpack(event) {
                 let wartosc = event.target.id;
 
-                if (wartosc == 'min_hp') {
+                console.log(wartosc);
+                if (wartosc == 'targowisko_akcja_1') {
                     let slot = 0;
-                    klasa.Update_backpack(slot, 'add');
+                    //  klasa.Update_backpack(slot, 'add');
 
                     wartosc.innerHTML = klasa.Backpack[0];
                 }
-                if (wartosc == 'max_hp') {
+                if (wartosc == 'targowisko_akcja_2') {
                     let slot = 1;
-                    klasa.Update_backpack(slot, 'add');
+                    //  klasa.Update_backpack(slot, 'add');
 
                     wartosc.innerHTML = klasa.Backpack[1];
                 }
-                if (wartosc == 'min_mp') {
+                if (wartosc == 'targowisko_akcja_3') {
                     let slot = 2;
-                    klasa.Update_backpack(slot, 'add');
+                    // klasa.Update_backpack(slot, 'add');
 
                     wartosc.innerHTML = klasa.Backpack[3];
                 }
-                if (wartosc == 'max_mp') {
+                if (wartosc == 'targowisko_akcja_4') {
                     let slot = 3;
                     klasa.Update_backpack(slot, 'add');
 
-                    wartosc.innerHTML = klasa.Backpack[4];
+                    // wartosc.innerHTML = klasa.Backpack[4];
                 }
 
             }

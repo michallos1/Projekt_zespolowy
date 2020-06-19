@@ -32,7 +32,7 @@ class Wojownik extends Klasa {
         this.Mana = 0;
         this.Attack = 0;
         this.Ekwipunek = new Eq();
-        this.Backpack = new Array(12);
+        this.Backpack = new Array(0, 0, 0, 0);
     }
 
     LevelUp(Int, Dex, Str) {
