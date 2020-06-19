@@ -31,6 +31,7 @@
                 klasa.LevelUp();
                 klasa.Update_stats();
                 klasa.Hp = klasa.MaxHp;
+                klasa.Mana = klasa.MaxMana;
                 setStats();
 
             }
@@ -53,6 +54,7 @@
                 klasa.LevelUp();
                 klasa.Update_stats();
                 klasa.Hp = klasa.MaxHp;
+                klasa.Mana = klasa.MaxMana;
                 setStats();
 
             }
@@ -74,6 +76,7 @@
                 klasa.LevelUp();
                 klasa.Update_stats();
                 klasa.Hp = klasa.MaxHp;
+                klasa.Mana = klasa.MaxMana;
                 setStats();
 
             }
@@ -208,7 +211,7 @@
 
             }
 
-			Atak = document.getElementById('walka_akcja_1').addEventListener('click', Atakuj);
+            Atak = document.getElementById('walka_akcja_1').addEventListener('click', Atakuj);
 
 
             Misja = document.getElementById('walka').addEventListener('click', Misja);
@@ -218,35 +221,35 @@
             Upg_buty = document.getElementById('kuznia_akcja_3').addEventListener('click', UpgreadBoots);
             Upg_rek = document.getElementById('kuznia_akcja_4').addEventListener('click', UpgreadGlove);
             Upg_helm = document.getElementById('kuznia_akcja_5').addEventListener('click', UpgreadHelm);
-	
-			function Atakuj() {
-			console.log('funkcja atakuj');
-			
-			
-			}
+
+            function Atakuj() {
+                console.log('funkcja atakuj');
+
+
+            }
 
 
             function Misja() {
                 let level = klasa.Lvl;
-				setWalka();
+                setWalka();
                 console.log('Level postaci: ' + level);
                 p.ustaw(level);
-				
-               /* if (p.walka(klasa) == 1) {
-                    console.log(klasa.Gold);
-                    console.log(klasa.Exp);
-                    klasa.Gold += (klasa.Lvl * 6) + klasa.Dex;
-                    klasa.Exp += klasa.Lvl + klasa.Int;
-                    alert('Misja zakończona powodzeniem!');
-                    if (klasa.Exp > klasa.ExpUp) {
-                        klasa.LevelUp();
-                    }
-                    setStats();
-                } else {
-                    alert('Poległeś w walce z potworem.');
-                    klasa.Hp = 1;
-                    setStats();
-                }*/
+
+                /* if (p.walka(klasa) == 1) {
+                     console.log(klasa.Gold);
+                     console.log(klasa.Exp);
+                     klasa.Gold += (klasa.Lvl * 6) + klasa.Dex;
+                     klasa.Exp += klasa.Lvl + klasa.Int;
+                     alert('Misja zakończona powodzeniem!');
+                     if (klasa.Exp > klasa.ExpUp) {
+                         klasa.LevelUp();
+                     }
+                     setStats();
+                 } else {
+                     alert('Poległeś w walce z potworem.');
+                     klasa.Hp = 1;
+                     setStats();
+                 }*/
             }
 
 
