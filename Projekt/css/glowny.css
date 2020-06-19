@@ -1,226 +1,208 @@
-body { 
-	margin:0;
+body {
+    margin: 0;
 }
 
-.tlo{
-	display: none;
-	flex-flow: column wrap;
-	block-size: 100vh;
-	background-color:#fff;
-	inline-size:100vw;	
+.tlo {
+    display: none;
+    flex-flow: column wrap;
+    block-size: 100vh;
+    background-color: #fff;
+    inline-size: 100vw;
 }
 
-.tlo1{
-	display:block;
-	flex-flow: column wrap;
-	block-size: 100vh;
-	background-color:#fff;
-	inline-size:100vw;	
-	background-color: #111119;
+.tlo1 {
+    display: block;
+    flex-flow: column wrap;
+    block-size: 100vh;
+    background-color: #fff;
+    inline-size: 100vw;
+    background-color: #111119;
 }
 
-.klasa1{
-	height: 100%;
-	width: 12%;
-	background-color: #100705;
-	font-size: 30px;
-	padding-top:2%;
+.klasa1 {
+    height: 100%;
+    width: 12%;
+    background-color: #100705;
+    font-size: 30px;
+    padding-top: 2%;
 }
 
-.klasa2{
-	height: 100%;
-	width: 68%;
-	background-color: #100705;
-	/*background-image:url("../obrazy/karczma.jpg");
+.klasa2 {
+    height: 100%;
+    width: 68%;
+    background-color: #100705;
+    /*background-image:url("../obrazy/karczma.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;*/
-
 }
 
-.klasa3{
-	height: 50%;
-	width: 20%;
-	background-color:#100705;
-	background: url(../obrazy/wojownik.jpg);
+.klasa3 {
+    height: 50%;
+    width: 20%;
+    background-color: #100705;
+    background: url(../obrazy/wojownik.jpg);
 }
 
-.klasa3 img{
-	padding-left: 3px;
-	background-repeat: no-repeat;
-	background-size: auto;
+.klasa3 img {
+    padding-left: 3px;
+    background-repeat: no-repeat;
+    background-size: auto;
 }
 
-.klasa4{
-	height: 50%;
-	width: 20%;
-	background-color:#100705;
-	color: #fff;
-
+.klasa4 {
+    height: 50%;
+    width: 20%;
+    background-color: #100705;
+    color: #fff;
 }
 
-.klasa4 table{
-	border-spacing: 5px;
-	margin: 20px;
-	border: #fff 1px solid;
-	width: 350px;
+.klasa4 table {
+    border-spacing: 5px;
+    margin: 20px;
+    border: #fff 1px solid;
+    width: 350px;
 }
 
-.klasa4 .naglowek_tabeli
-{
-		text-align:center;
-		font-size:18px;
-		text-decoration: underline;
+.klasa4 .naglowek_tabeli {
+    text-align: center;
+    font-size: 18px;
+    text-decoration: underline;
 }
 
-.klasa4 .right
-{
-		text-align:right;
+.klasa4 .right {
+    text-align: right;
 }
 
-.klasa1 input[type="button"]
-{
-	background-image: linear-gradient(to bottom right, blue, aqua);
-	border: none;
+.klasa1 input[type="button"] {
+    background-image: linear-gradient(to bottom right, blue, aqua);
+    border: none;
 }
 
-.tlo input[type="button"]
-{
-	background-image: linear-gradient(to bottom right, blue, aqua);
-	border: none;
-	height: 50px;
-	width: 74%;
-	margin-top: 20px;
-	margin-left: 13%;
-	font-size: 20px;
-	float: left;
+.tlo input[type="button"] {
+    background-image: linear-gradient(to bottom right, blue, aqua);
+    border: none;
+    height: 50px;
+    width: 74%;
+    margin-top: 20px;
+    margin-left: 13%;
+    font-size: 20px;
+    float: left;
 }
 
-.tlo .klasa2 input[type="button"]
-{
-	background: #fff;
-	border: none;
-	opacity: 0.5;
-	height: 50px;
-	width: 13%;
-	margin-top: 20px;
-	margin-left: 3%;
-	font-size: 20px;
-	float: left;
-	
+.tlo .klasa2 input[type="button"] {
+    background: #fff;
+    border: none;
+    opacity: 0.5;
+    height: 50px;
+    width: auto;
+    margin-top: 20px;
+    margin-left: 3%;
+    font-size: 20px;
+    float: left;
 }
 
-.tlo .klasa2 input[type="button"]:hover
-{
-	color: #000;
-	opacity: 0.8;
+.tlo .klasa2 input[type="button"]:hover {
+    color: #000;
+    opacity: 0.8;
 }
 
-.tlo1 input[type="button"]
-{
-	background-image: linear-gradient(to bottom right, blue, aqua);
-	border: none;
-	height: 5%;
-	width: 30%;
-	font-size: 20px;
-	margin-left: 35%;
+.tlo1 input[type="button"] {
+    background-image: linear-gradient(to bottom right, blue, aqua);
+    border: none;
+    height: 5%;
+    width: 30%;
+    font-size: 20px;
+    margin-left: 35%;
 }
 
-input[type="button"]:hover
-{
-	color: #fff;
+input[type="button"]:hover {
+    color: #fff;
 }
 
-.klasa2 .walka{
-	height: 100%;
-	width: 10%;
-	display: block;
-	background: url(../obrazy/las.jpg) center/100% no-repeat;
+.klasa2 .walka {
+    height: 100%;
+    width: 10%;
+    display: block;
+    background: url(../obrazy/las.jpg) center/100% no-repeat;
 }
 
-.walka .logi
-{
-	background-color: #000;
-	color: #fff;
-	opacity: 0.8;
-	width: 30%;
-	height: 70%;
-	margin-top: 10%;
-	margin-left: 25%;
+.walka .logi {
+    background-color: #000;
+    color: #fff;
+    opacity: 0.8;
+    width: 30%;
+    height: 70%;
+    margin-top: 10%;
+    margin-left: 25%;
 }
 
-.klasa2 .walka input[type="button"]
-{
-	margin-top: none;
-	margin-bottom: 20px;	
+.klasa2 .walka input[type="button"] {
+    margin-top: none;
+    margin-bottom: 20px;
 }
 
-.klasa2 .srodek0{
-	width: 100%;
-	height: 100%;
-	display: block;
-	background: url(../obrazy/miasto.jpg) center/100% no-repeat;
+.klasa2 .srodek0 {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: url(../obrazy/miasto.jpg) center/100% no-repeat;
 }
 
-.klasa2 .srodek1{
-	width: 100%;
-	height: 100%;
-	display: none;
-	background: url(../obrazy/karczma.jpg) center/100% no-repeat;
+.klasa2 .srodek1 {
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: url(../obrazy/karczma.jpg) center/100% no-repeat;
 }
 
-.klasa2 .srodek2{
-	width: 100%;
-	height: 100%;
-	display: none;
-	background: url(../obrazy/targowisko.jpg) center/100% no-repeat;
+.klasa2 .srodek2 {
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: url(../obrazy/targowisko.jpg) center/100% no-repeat;
 }
 
-.klasa2 .srodek3{
-	width: 100%;
-	height: 100%;
-	display: none;
-	background: url(../obrazy/kuznia.jpg) center/100% no-repeat;
+.klasa2 .srodek3 {
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: url(../obrazy/kuznia.jpg) center/100% no-repeat;
 }
 
-.wojownik
-{
-	margin-top:5%;
-	margin-left:5%;
-	width:25%;
-	height: 72%;
-	background-color: #a00;
-	float: left;
+.wojownik {
+    margin-top: 5%;
+    margin-left: 5%;
+    width: 25%;
+    height: 72%;
+    background-color: #a00;
+    float: left;
 }
 
-.lucznik
-{
-	margin-top:5%;
-	margin-left:7%;
-	width:25%;
-	height: 72%;
-	background-color: #0a0;
-	float: left;
+.lucznik {
+    margin-top: 5%;
+    margin-left: 7%;
+    width: 25%;
+    height: 72%;
+    background-color: #0a0;
+    float: left;
 }
 
-.mag
-{
-	margin-top:5%;
-	margin-left:7%;
-	width:25%;
-	height: 72%;
-	background-color: #00a;
-	float: left;
+.mag {
+    margin-top: 5%;
+    margin-left: 7%;
+    width: 25%;
+    height: 72%;
+    background-color: #00a;
+    float: left;
 }
 
-.tlo1 img
-{
-
-	margin-left: 20%;
-	width:60%;
+.tlo1 img {
+    margin-left: 20%;
+    width: 60%;
 }
-.tlo1 p
-{
-	margin-top: 2%;
-	text-align: center;
-	font-size: 40px;
+
+.tlo1 p {
+    margin-top: 2%;
+    text-align: center;
+    font-size: 40px;
 }
