@@ -363,45 +363,56 @@
                 console.log(event.target.id);
 
                 if (event.target.id == 'miasto_akcja_1') {
-                    console.log('1');
-                    if (klasa.MaxHp - klasa.Hp >= 10) {
-                        klasa.Hp = +10;
-                        setStats();
-                        console.log('mains');
-                    } else {
-                        console.log('else');
-                        klasa.Hp = klasa.MaxHp;
-                        setStats();
+
+                    if (klasa.Backpack[4] >= 1) {
+
+                        if (klasa.MaxHp - klasa.Hp >= 10) {
+                            klasa.Hp = +10;
+                            setStats();
+                        } else {
+                            klasa.Hp = klasa.MaxHp;
+                            setStats();
+                        }
                     }
                 }
 
                 if (event.target.id == 'miasto_akcja_2') {
-                    if (klasa.MaxHp - klasa.Hp >= 30) {
-                        klasa.Hp = +30;
-                        setStats();
-                    } else {
-                        klasa.Hp = klasa.MaxHp;
-                        setStats();
+
+                    if (klasa.Backpack[1] >= 1) {
+                        if (klasa.MaxHp - klasa.Hp >= 30) {
+                            klasa.Hp = +30;
+                            setStats();
+                        } else {
+                            klasa.Hp = klasa.MaxHp;
+                            setStats();
+                        }
                     }
                 }
 
                 if (event.target.id == 'miasto_akcja_3') {
-                    if (klasa.MaxMana - klasa.Mana >= 10) {
-                        klasa.Mana = +10;
-                        setStats();
-                    } else {
-                        klasa.Mana = klasa.MaxMana;
-                        setStats();
+
+                    if (klasa.Backpack[2] >= 1) {
+                        if (klasa.MaxMana - klasa.Mana >= 10) {
+                            klasa.Mana = +10;
+                            setStats();
+                        } else {
+                            klasa.Mana = klasa.MaxMana;
+                            setStats();
+                        }
                     }
                 }
 
+
                 if (event.target.id == 'miasto_akcja_4') {
-                    if (klasa.MaxMana - klasa.Mana >= 10) {
-                        klasa.Mana = +10;
-                        setStats();
-                    } else {
-                        klasa.Mana = klasa.MaxMana;
-                        setStats();
+
+                    if (klasa.Backpack[3] >= 1) {
+                        if (klasa.MaxMana - klasa.Mana >= 10) {
+                            klasa.Mana = +10;
+                            setStats();
+                        } else {
+                            klasa.Mana = klasa.MaxMana;
+                            setStats();
+                        }
                     }
                 }
             }
