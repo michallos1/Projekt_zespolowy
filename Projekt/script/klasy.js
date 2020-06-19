@@ -85,7 +85,7 @@ class Lucznik extends Klasa {
         this.Attack = this.Ekwipunek.Weapon + (this.Dex / 2);
         this.Def = this.Ekwipunek.Armor + (this.Str / 2);
         this.MaxHp = 25 + this.Str;
-        this.MaxMana = 10 + this.Int;
+        this.MaxMana = 15 + this.Int;
     }
 
     Update_backpack(slot, type) {
