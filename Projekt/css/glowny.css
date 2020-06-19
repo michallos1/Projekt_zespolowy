@@ -131,8 +131,8 @@ input[type="button"]:hover
 }
 
 .klasa2 .walka{
+	width: 100%;
 	height: 100%;
-	width: 10%;
 	display: block;
 	background: url(../obrazy/las.jpg) center/100% no-repeat;
 }
@@ -143,15 +143,15 @@ input[type="button"]:hover
 	color: #fff;
 	opacity: 0.8;
 	width: 30%;
-	height: 70%;
-	margin-top: 10%;
+	height: 80%;
 	margin-left: 25%;
 }
 
 .klasa2 .walka input[type="button"]
 {
-	margin-top: none;
-	margin-bottom: 20px;	
+	margin-top: 8%;
+	margin-left: 9%;
+	
 }
 
 .klasa2 .srodek0{
