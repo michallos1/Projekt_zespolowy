@@ -22,8 +22,6 @@
                 tlo1.style.display = "none";
                 tlo.style.display = "flex";
 
-                //klasa3.style.background = "url(../obrazy/wojownik.jpg)";
-
                 var a = wojownik;
                 const wojo_s = new Wojownik();
 
@@ -44,8 +42,6 @@
                 tlo1.style.display = "none";
                 tlo.style.display = "flex";
 
-                //klasa3.style.background = "url(../obrazy/lucznik.jpg)";
-
                 var a = lucznik;
                 const lucz_s = new Lucznik();
 
@@ -56,7 +52,6 @@
             }
 
             let mag = document.getElementById('mag');
-
             mag.addEventListener('click', setMag);
 
             function setMag() {
@@ -151,6 +146,10 @@
                 gold = document.getElementById('tabela_zloto');
                 exp = document.getElementById('tabela_exp1');
                 exp2 = document.getElementById('tabela_exp2');
+                min_hp = document.getElementById('min_hp');
+                max_hp = document.getElementById('max_hp');
+                min_mp = document.getElementById('min_mp');
+                max_mp = document.getElementById('max_mp');
 
 
                 int.innerHTML = klasa.Int;
@@ -164,6 +163,11 @@
                 exp.innerHTML = klasa.Exp;
                 exp2.innerHTML = klasa.ExpUp;
                 hp2.innerHTML = klasa.MaxHp;
+                min_hp.innerHTML = klasa.Backpack[0];
+                max_hp.innerHTML = klasa.Backpack[1];
+                min_mp.innerHTML = klasa.Backpack[2];
+                max_mp.innerHTML = klasa.Backpack[3];
+
             }
 
 			MisjaI = document.getElementById('karczma_akcja_1').addEventListener('click', MisjaI);
@@ -284,8 +288,29 @@
             function Update_backpack(event) {
                 let wartosc = event.target.id;
 
-                if (wartosc == '') {
+                if (wartosc == 'min_hp') {
+                    let slot = 0;
+                    klasa.Update_backpack(slot, 'add');
 
+                    wartosc.innerHTML = klasa.Backpack[0];
+                }
+                if (wartosc == 'max_hp') {
+                    let slot = 1;
+                    klasa.Update_backpack(slot, 'add');
+
+                    wartosc.innerHTML = klasa.Backpack[1];
+                }
+                if (wartosc == 'min_mp') {
+                    let slot = 2;
+                    klasa.Update_backpack(slot, 'add');
+
+                    wartosc.innerHTML = klasa.Backpack[3];
+                }
+                if (wartosc == 'max_mp') {
+                    let slot = 3;
+                    klasa.Update_backpack(slot, 'add');
+
+                    wartosc.innerHTML = klasa.Backpack[4];
                 }
 
             }
