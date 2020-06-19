@@ -9,9 +9,9 @@ class potwor {
         this.Hp += lvl * 5;
         this.Atk += lvl;
         this.Def += (1 / 3) * lvl;
-        console.log('Hp potwora: ' + this.Hp);
-        console.log('Atak potwora: ' + this.Atk);
-        console.log('Obrona potwora: ' + this.Def);
+        console.log('Hp potwora: ' + parseInt(this.Hp,10));
+        console.log('Atak potwora: ' + parseInt(this.Atk,10));
+        console.log('Obrona potwora: ' + parseInt(this.Def, 10));
     }
 
     walka(Klasa) {
