@@ -172,6 +172,7 @@
                 gold = document.getElementById('tabela_zloto');
                 exp = document.getElementById('tabela_exp1');
                 exp2 = document.getElementById('tabela_exp2');
+                lvl = document.getElementById('tabela_lvl');
                 //mikstury
                 min_hp = document.getElementById('min_hp');
                 max_hp = document.getElementById('max_hp');
@@ -191,6 +192,7 @@
                 gold.innerHTML = klasa.Gold;
                 exp.innerHTML = klasa.Exp;
                 exp2.innerHTML = klasa.ExpUp;
+                lvl.innerHTML = klasa.Lvl;
 
                 //mikstury
                 min_hp.innerHTML = klasa.Backpack[0];
@@ -358,35 +360,48 @@
 
             function use_potion(event) {
 
+                console.log(event.target.id);
+
                 if (event.target.id == 'miasto_akcja_1') {
+                    console.log('1');
                     if (klasa.MaxHp - klasa.Hp >= 10) {
                         klasa.Hp = +10;
+                        setStats();
+                        console.log('mains');
                     } else {
+                        console.log('else');
                         klasa.Hp = klasa.MaxHp;
+                        setStats();
                     }
                 }
 
                 if (event.target.id == 'miasto_akcja_2') {
                     if (klasa.MaxHp - klasa.Hp >= 30) {
                         klasa.Hp = +30;
+                        setStats();
                     } else {
                         klasa.Hp = klasa.MaxHp;
+                        setStats();
                     }
                 }
 
                 if (event.target.id == 'miasto_akcja_3') {
                     if (klasa.MaxMana - klasa.Mana >= 10) {
                         klasa.Mana = +10;
+                        setStats();
                     } else {
                         klasa.Mana = klasa.MaxMana;
+                        setStats();
                     }
                 }
 
                 if (event.target.id == 'miasto_akcja_4') {
                     if (klasa.MaxMana - klasa.Mana >= 10) {
                         klasa.Mana = +10;
+                        setStats();
                     } else {
                         klasa.Mana = klasa.MaxMana;
+                        setStats();
                     }
                 }
             }
@@ -451,11 +466,11 @@
 
                 <div class="walka" id="w">
                     <!-- WALKA -->
-					
-					<div class="logi">
-					
-					</div>
-					
+
+                    <div class="logi">
+
+                    </div>
+
                     <input id="walka_akcja_1" value="Atakuj" type="button">
                     <input id="walka_akcja_2" value="Mikstura życia" type="button">
                     <input id="walka_akcja_3" value="Miktura many" type="button">
