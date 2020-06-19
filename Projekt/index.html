@@ -351,26 +351,31 @@
             function Update_backpack(event) {
                 let wartosc = event.target.id;
 
-                console.log(wartosc);
-                if (wartosc == 'targowisko_akcja_1') {
+                if (wartosc == 'targowisko_akcja_1' && klasa.Gold > 3) {
                     let slot = 0;
                     klasa.Update_backpack(slot, 'add');
-                    document.getElementById('min_hp').innerHTML = klasa.Backpack[0];
+                    klasa.Gold = klasa.Gold - 3;
+                    setStats();
                 }
-                if (wartosc == 'targowisko_akcja_2') {
+
+
+                if (wartosc == 'targowisko_akcja_2' && klasa.Gold > 5) {
                     let slot = 1;
                     klasa.Update_backpack(slot, 'add');
-                    document.getElementById('max_hp').innerHTML = klasa.Backpack[1];
+                    klasa.Gold = klasa.Gold - 5;
+                    setStats();
                 }
-                if (wartosc == 'targowisko_akcja_3') {
+                if (wartosc == 'targowisko_akcja_3' && klasa.Gold > 3) {
                     let slot = 2;
                     klasa.Update_backpack(slot, 'add');
-                    document.getElementById('min_mp').innerHTML = klasa.Backpack[2];
+                    klasa.Gold = klasa.Gold - 3;
+                    setStats();
                 }
-                if (wartosc == 'targowisko_akcja_4') {
+                if (wartosc == 'targowisko_akcja_4' && klasa.Gold > 5) {
                     let slot = 3;
                     klasa.Update_backpack(slot, 'add');
-                    document.getElementById('max_mp').innerHTML = klasa.Backpack[3];
+                    klasa.Gold = klasa.Gold - 5;
+                    setStats();
                 }
             }
 
@@ -525,10 +530,10 @@
                 <div class="srodek2" id="s2">
                     <!-- TARGOWISKO -->
 
-                    <input id="targowisko_akcja_1" value="Mały eliksir życia" type="button">
-                    <input id="targowisko_akcja_2" value="Duży eliksir życia" type="button">
-                    <input id="targowisko_akcja_3" value="Mały eliksir many" type="button">
-                    <input id="targowisko_akcja_4" value="Duży eliksir many" type="button">
+                    <input id="targowisko_akcja_1" value="Mały eliksir życia 3 golda" type="button">
+                    <input id="targowisko_akcja_2" value="Duży eliksir życia 5 golda" type="button">
+                    <input id="targowisko_akcja_3" value="Mały eliksir many 3 golda" type="button">
+                    <input id="targowisko_akcja_4" value="Duży eliksir many 5 golda" type="button">
 
                 </div>
 
