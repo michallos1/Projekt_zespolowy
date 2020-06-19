@@ -1,438 +1,432 @@
 <!DOCTYPE html>
+
 <head>
-<title>Miasto</title>
-<link rel="stylesheet" href="css/glowny.css">
-<script src="script/klasy.js" defer></script>
-<script>
-	window.onload=function(){
-	var klasa;
-	let wojownik_w = document.getElementById('wojownik');
-	let lucznik_w = document.getElementById('lucznik');
-	let mag_w = document.getElementById('mag');
-	
-	wojownik_w.addEventListener('click', setWojownik);
-	lucznik_w.addEventListener('click', setLucznik);
-	mag_w.addEventListener('click', setMag);
-	
-	function setWojownik() {
-		tlo1 = document.getElementById('t1');
-		tlo = document.getElementById('t');
+    <title>Miasto</title>
+    <link rel="stylesheet" href="css/glowny.css">
+    <script src="script/klasy.js" defer></script>
+    <script>
+        window.onload = function() {
+            var klasa;
+            let wojownik_w = document.getElementById('wojownik');
+            let lucznik_w = document.getElementById('lucznik');
+            let mag_w = document.getElementById('mag');
 
-		tlo1.style.display = "none";
-		tlo.style.display = "flex";
-		
-		//klasa3.style.background = "url(../obrazy/wojownik.jpg)";
-		
-		var a=wojownik;
-		const wojo_s = new Wojownik();
+            wojownik_w.addEventListener('click', setWojownik);
+            lucznik_w.addEventListener('click', setLucznik);
+            mag_w.addEventListener('click', setMag);
 
-		klasa = wojo_s;
-		klasa.LevelUp();
-		klasa.Update_stats();
-		setStats();
-	}
-	
-	let lucznik = document.getElementById('lucznik');
-	
-	lucznik.addEventListener('click', setLucznik);
-	
-	function setLucznik() {
-		tlo1 = document.getElementById('t1');
-		tlo = document.getElementById('t');
+            function setWojownik() {
+                tlo1 = document.getElementById('t1');
+                tlo = document.getElementById('t');
 
-		tlo1.style.display = "none";
-		tlo.style.display = "flex";
-		
-		//klasa3.style.background = "url(../obrazy/lucznik.jpg)";
-		
-		var a=lucznik;
-		const lucz_s = new Lucznik();
+                tlo1.style.display = "none";
+                tlo.style.display = "flex";
 
-		klasa = lucz_s;
-		klasa.LevelUp();
-		klasa.Update_stats();
-		setStats();
-	}
-	
-	let mag = document.getElementById('mag');
-	
-	mag.addEventListener('click', setMag);
-	
-	function setMag() {
-		tlo1 = document.getElementById('t1');
-		tlo = document.getElementById('t');
+                //klasa3.style.background = "url(../obrazy/wojownik.jpg)";
 
-		tlo1.style.display = "none";
-		tlo.style.display = "flex";
-		
-		//klasa3.style.background = "url(../obrazy/mag.jpg)";
-		
-		var a=mag;
-		const mag_s = new Mag();
+                var a = wojownik;
+                const wojo_s = new Wojownik();
 
-		klasa = mag_s;
-		klasa.LevelUp();
-		klasa.Update_stats();
-		setStats();
-	}
+                klasa = wojo_s;
+                klasa.LevelUp();
+                klasa.Update_stats();
+                setStats();
+            }
 
+            let lucznik = document.getElementById('lucznik');
 
+            lucznik.addEventListener('click', setLucznik);
 
-	let targowisko = document.getElementById('targowisko');
-	let karczma = document.getElementById('karczma');
-	let miasto = document.getElementById('miasto');
-	let kuznia = document.getElementById('kuznia');	
+            function setLucznik() {
+                tlo1 = document.getElementById('t1');
+                tlo = document.getElementById('t');
 
-	miasto.addEventListener('click', setMiasto);
-	karczma.addEventListener('click', setKarczma);
-	targowisko.addEventListener('click', setTargowisko);
-	kuznia.addEventListener('click', setKuznia);
-	
+                tlo1.style.display = "none";
+                tlo.style.display = "flex";
+
+                //klasa3.style.background = "url(../obrazy/lucznik.jpg)";
+
+                var a = lucznik;
+                const lucz_s = new Lucznik();
+
+                klasa = lucz_s;
+                klasa.LevelUp();
+                klasa.Update_stats();
+                setStats();
+            }
+
+            let mag = document.getElementById('mag');
+
+            mag.addEventListener('click', setMag);
+
+            function setMag() {
+                tlo1 = document.getElementById('t1');
+                tlo = document.getElementById('t');
+
+                tlo1.style.display = "none";
+                tlo.style.display = "flex";
+
+                //klasa3.style.background = "url(../obrazy/mag.jpg)";
+
+                var a = mag;
+                const mag_s = new Mag();
+
+                klasa = mag_s;
+                klasa.LevelUp();
+                klasa.Update_stats();
+                setStats();
+            }
 
 
-	function setMiasto() {
-		srodek0 = document.getElementById('s0');
-		srodek1 = document.getElementById('s1');
-		srodek2 = document.getElementById('s2');
-		srodek3 = document.getElementById('s3');
 
-		srodek0.style.display = "block";
-		srodek1.style.display = "none";
-		srodek2.style.display = "none";
-		srodek3.style.display = "none";
-	}
-	
-	function setKarczma() {
-		srodek0 = document.getElementById('s0');
-		srodek1 = document.getElementById('s1');
-		srodek2 = document.getElementById('s2');
-		srodek3 = document.getElementById('s3');
+            let targowisko = document.getElementById('targowisko');
+            let karczma = document.getElementById('karczma');
+            let miasto = document.getElementById('miasto');
+            let kuznia = document.getElementById('kuznia');
 
-		srodek0.style.display = "none";
-		srodek1.style.display = "block";
-		srodek2.style.display = "none";
-		srodek3.style.display = "none";
-	}
-
-	function setTargowisko() {
-		srodek0 = document.getElementById('s0');
-		srodek1 = document.getElementById('s1');
-		srodek2 = document.getElementById('s2');
-		srodek3 = document.getElementById('s3');
-
-		srodek0.style.display = "none";
-		srodek1.style.display = "none";
-		srodek2.style.display = "block";
-		srodek3.style.display = "none";
-	}
-
-	function setKuznia() {
-		srodek0 = document.getElementById('s0');
-		srodek1 = document.getElementById('s1');
-		srodek2 = document.getElementById('s2');
-		srodek3 = document.getElementById('s3');
-
-		srodek0.style.display = "none";
-		srodek1.style.display = "none";
-		srodek2.style.display = "none";
-		srodek3.style.display = "block";
-	}
-
-	function setStats(){
-		int = document.getElementById('tabela_int');
-		atak = document.getElementById('tabela_atak');
-		dex = document.getElementById('tabela_dex');
-		def = document.getElementById('tabela_def');
-		str = document.getElementById('tabela_str');
-		hp = document.getElementById('tabela_hp');
-		hp2 = document.getElementById('tabela_hp2');
-		mana = document.getElementById('tabela_mana1');
-		gold = document.getElementById('tabela_zloto');
-		exp = document.getElementById('tabela_exp1');
-		exp2 = document.getElementById('tabela_exp2');
+            miasto.addEventListener('click', setMiasto);
+            karczma.addEventListener('click', setKarczma);
+            targowisko.addEventListener('click', setTargowisko);
+            kuznia.addEventListener('click', setKuznia);
 
 
-		int.innerHTML = klasa.Int;
-		atak.innerHTML = klasa.Attack;
-		dex.innerHTML = klasa.Dex;
-		def.innerHTML = klasa.Def;
-		str.innerHTML = klasa.Str;
-		hp.innerHTML = klasa.Hp;
-		mana.innerHTML = klasa.Mana;
-		gold.innerHTML = klasa.Gold;
-		exp.innerHTML = klasa.Exp;
-		exp2.innerHTML = klasa.ExpUp;
-		hp2.innerHTML = klasa.MaxHp;
-	}
-	
 
-	Upg_wep = document.getElementById('kuznia_akcja_1').addEventListener('click',UpgreadWep);
-	Upg_zbr = document.getElementById('kuznia_akcja_2').addEventListener('click',UpgreadChes);
-	Upg_buty = document.getElementById('kuznia_akcja_3').addEventListener('click',UpgreadBoots);
-	Upg_rek = document.getElementById('kuznia_akcja_4').addEventListener('click',UpgreadGlove);
-	Upg_helm = document.getElementById('kuznia_akcja_5').addEventListener('click',UpgreadHelm);
+            function setMiasto() {
+                srodek0 = document.getElementById('s0');
+                srodek1 = document.getElementById('s1');
+                srodek2 = document.getElementById('s2');
+                srodek3 = document.getElementById('s3');
 
-	function UpgreadWep(){
-		gold = klasa.Gold;
-		if(gold>=10){
-		klasa.Ekwipunek.Upgrade_wep();
-		klasa.Gold = gold - 10;
-		console.log(klasa.Gold);
-		console.log(klasa.Ekwipunek);
-		}
-		else
-		alert('Za mało golda');
+                srodek0.style.display = "block";
+                srodek1.style.display = "none";
+                srodek2.style.display = "none";
+                srodek3.style.display = "none";
+            }
 
-		klasa.Update_stats();
-		setStats();
-	}
+            function setKarczma() {
+                srodek0 = document.getElementById('s0');
+                srodek1 = document.getElementById('s1');
+                srodek2 = document.getElementById('s2');
+                srodek3 = document.getElementById('s3');
 
-	function UpgreadChes(){
-		gold = klasa.Gold;
-		if(gold>=10){
-		klasa.Ekwipunek.Upgrade_chest();
-		klasa.Gold = gold - 10;
-		console.log(klasa.Gold);
-		console.log(klasa.Ekwipunek);
-		}
-		else
-		alert('Za mało golda');
+                srodek0.style.display = "none";
+                srodek1.style.display = "block";
+                srodek2.style.display = "none";
+                srodek3.style.display = "none";
+            }
 
-		klasa.Update_stats();
-		setStats();
-	}
+            function setTargowisko() {
+                srodek0 = document.getElementById('s0');
+                srodek1 = document.getElementById('s1');
+                srodek2 = document.getElementById('s2');
+                srodek3 = document.getElementById('s3');
 
-	function UpgreadBoots(){
-		gold = klasa.Gold;
-		if(gold>=5){
-		klasa.Ekwipunek.Upgrade_boots();
-		klasa.Gold = gold - 5;
-		console.log(klasa.Gold);
-		console.log(klasa.Ekwipunek);
-		}
-		else
-		alert('Za mało golda');
+                srodek0.style.display = "none";
+                srodek1.style.display = "none";
+                srodek2.style.display = "block";
+                srodek3.style.display = "none";
+            }
 
-		klasa.Update_stats();
-		setStats();
-	}
+            function setKuznia() {
+                srodek0 = document.getElementById('s0');
+                srodek1 = document.getElementById('s1');
+                srodek2 = document.getElementById('s2');
+                srodek3 = document.getElementById('s3');
 
-	function UpgreadGlove(){
-		gold = klasa.Gold;
-		if(gold>=5){
-		klasa.Ekwipunek.Upgrade_gl();
-		klasa.Gold = gold - 5;
-		console.log(klasa.Gold);
-		console.log(klasa.Ekwipunek);
-		}
-		else
-		alert('Za mało golda');
+                srodek0.style.display = "none";
+                srodek1.style.display = "none";
+                srodek2.style.display = "none";
+                srodek3.style.display = "block";
+            }
 
-		klasa.Update_stats();
-		setStats();
-	}
-
-	function UpgreadHelm(){
-		gold = klasa.Gold;
-		if(gold>=6){
-		klasa.Ekwipunek.Upgrade_helm();
-		klasa.Gold = gold - 6;
-		console.log(klasa.Gold);
-		console.log(klasa.Ekwipunek);
-		}
-		else
-		alert('Za mało golda');
-
-		klasa.Update_stats();
-		setStats();
-	}
+            function setStats() {
+                int = document.getElementById('tabela_int');
+                atak = document.getElementById('tabela_atak');
+                dex = document.getElementById('tabela_dex');
+                def = document.getElementById('tabela_def');
+                str = document.getElementById('tabela_str');
+                hp = document.getElementById('tabela_hp');
+                hp2 = document.getElementById('tabela_hp2');
+                mana = document.getElementById('tabela_mana1');
+                gold = document.getElementById('tabela_zloto');
+                exp = document.getElementById('tabela_exp1');
+                exp2 = document.getElementById('tabela_exp2');
 
 
-	}
-</script>
+                int.innerHTML = klasa.Int;
+                atak.innerHTML = klasa.Attack;
+                dex.innerHTML = klasa.Dex;
+                def.innerHTML = klasa.Def;
+                str.innerHTML = klasa.Str;
+                hp.innerHTML = klasa.Hp;
+                mana.innerHTML = klasa.Mana;
+                gold.innerHTML = klasa.Gold;
+                exp.innerHTML = klasa.Exp;
+                exp2.innerHTML = klasa.ExpUp;
+                hp2.innerHTML = klasa.MaxHp;
+            }
+
+
+            Upg_wep = document.getElementById('kuznia_akcja_1').addEventListener('click', UpgreadWep);
+            Upg_zbr = document.getElementById('kuznia_akcja_2').addEventListener('click', UpgreadChes);
+            Upg_buty = document.getElementById('kuznia_akcja_3').addEventListener('click', UpgreadBoots);
+            Upg_rek = document.getElementById('kuznia_akcja_4').addEventListener('click', UpgreadGlove);
+            Upg_helm = document.getElementById('kuznia_akcja_5').addEventListener('click', UpgreadHelm);
+
+            function UpgreadWep() {
+                gold = klasa.Gold;
+                if (gold >= 10) {
+                    klasa.Ekwipunek.Upgrade_wep();
+                    klasa.Gold = gold - 10;
+                    console.log(klasa.Gold);
+                    console.log(klasa.Ekwipunek);
+                } else
+                    alert('Za mało golda');
+
+                klasa.Update_stats();
+                setStats();
+            }
+
+            function UpgreadChes() {
+                gold = klasa.Gold;
+                if (gold >= 10) {
+                    klasa.Ekwipunek.Upgrade_chest();
+                    klasa.Gold = gold - 10;
+                    console.log(klasa.Gold);
+                    console.log(klasa.Ekwipunek);
+                } else
+                    alert('Za mało golda');
+
+                klasa.Update_stats();
+                setStats();
+            }
+
+            function UpgreadBoots() {
+                gold = klasa.Gold;
+                if (gold >= 5) {
+                    klasa.Ekwipunek.Upgrade_boots();
+                    klasa.Gold = gold - 5;
+                    console.log(klasa.Gold);
+                    console.log(klasa.Ekwipunek);
+                } else
+                    alert('Za mało golda');
+
+                klasa.Update_stats();
+                setStats();
+            }
+
+            function UpgreadGlove() {
+                gold = klasa.Gold;
+                if (gold >= 5) {
+                    klasa.Ekwipunek.Upgrade_gl();
+                    klasa.Gold = gold - 5;
+                    console.log(klasa.Gold);
+                    console.log(klasa.Ekwipunek);
+                } else
+                    alert('Za mało golda');
+
+                klasa.Update_stats();
+                setStats();
+            }
+
+            function UpgreadHelm() {
+                gold = klasa.Gold;
+                if (gold >= 6) {
+                    klasa.Ekwipunek.Upgrade_helm();
+                    klasa.Gold = gold - 6;
+                    console.log(klasa.Gold);
+                    console.log(klasa.Ekwipunek);
+                } else
+                    alert('Za mało golda');
+
+                klasa.Update_stats();
+                setStats();
+            }
+
+            let min_hp = document.getElementById('min_hp').addEventListener('click', );
+            let max_hp = document.getElementById('max_hp').addEventListener('click', );
+            let min_mp = document.getElementById('min_mp').addEventListener('click', );
+            let max_mp = document.getElementById('max_mp').addEventListener('click', );
+
+
+            function
+
+        }
+    </script>
 </head>
 
 <body>
 
-<div class="kontener">
+    <div class="kontener">
 
-	<div class="tlo1" id="t1">
-	
-		<div class="wojownik">
-			<p>Wojownik</p>
-			Wojownik charakteryzuje się najwyższą ilością punktów życia spośród wszystkich profesji.
-			Jest powolny ale zadaje duże obrażenia i posiada gruby pancerz.
-			<img src="obrazy/wojownik.jpg"/>
-			</br>
-			<input id="wojownik" value="wojownik" type="button">
-		</div>
-		
-		<div class="lucznik">
-			<p>Łucznik</p>
-			Łucznik jest bardzo szybki, potrafi uderzyć dwa razy pod rząd. 
-			Jego zręczność pozwala także na uniknięcie ciosu przeciwnika.
-			Jest to klasa daleko dystansowa, co oznacza, że oponent musi stracić dwie tury aby do niego podejść.
-			<img src="obrazy/lucznik.jpg"/>
-			</br>
-			<input id="lucznik" value="lucznik" type="button">
-		</div>
-		
-		<div class="mag">
-			<p>Mag</p>
-			Mag polega na swojej inteligencji i księgi czarów, którą posiada.
-			Dzięki niej ma dostęp do różnych zaklęć żywiiołów.
-			Przeciwnik aby go zaatakować musi zbliżyć sie do niego i stracić jedną turę.
-			<img src="obrazy/mag.jpg"/>
-			</br>
-			<input id="mag" value="mag" type="button">
-		</div>
-	</div>
+        <div class="tlo1" id="t1">
 
-	<div class="tlo" id="t">
-		<div class="klasa1">
-			
-					<input id="miasto" value="Miasto" type="button">							
-					<input id="karczma" value="Karczma" type="button">	
-					<input id="targowisko" value="Targowisko" type="button">	
-					<input id="kuznia" value="Kuźnia" type="button">
-				
-		</div>
-		
-		<div class="klasa2">
-			<div class="srodek0" id="s0"><!-- MIASTO -->
-				
-			<!--	<input id="miasto_akcja_1" value="akcja" type="button">
+            <div class="wojownik">
+                <p>Wojownik</p>
+                Wojownik charakteryzuje się najwyższą ilością punktów życia spośród wszystkich profesji. Jest powolny ale zadaje duże obrażenia i posiada gruby pancerz.
+                <img src="obrazy/wojownik.jpg" />
+                </br>
+                <input id="wojownik" value="wojownik" type="button">
+            </div>
+
+            <div class="lucznik">
+                <p>Łucznik</p>
+                Łucznik jest bardzo szybki, potrafi uderzyć dwa razy pod rząd. Jego zręczność pozwala także na uniknięcie ciosu przeciwnika. Jest to klasa daleko dystansowa, co oznacza, że oponent musi stracić dwie tury aby do niego podejść.
+                <img src="obrazy/lucznik.jpg" />
+                </br>
+                <input id="lucznik" value="lucznik" type="button">
+            </div>
+
+            <div class="mag">
+                <p>Mag</p>
+                Mag polega na swojej inteligencji i księgi czarów, którą posiada. Dzięki niej ma dostęp do różnych zaklęć żywiiołów. Przeciwnik aby go zaatakować musi zbliżyć sie do niego i stracić jedną turę.
+                <img src="obrazy/mag.jpg" />
+                </br>
+                <input id="mag" value="mag" type="button">
+            </div>
+        </div>
+
+        <div class="tlo" id="t">
+            <div class="klasa1">
+
+                <input id="miasto" value="Miasto" type="button">
+                <input id="karczma" value="Karczma" type="button">
+                <input id="targowisko" value="Targowisko" type="button">
+                <input id="kuznia" value="Kuźnia" type="button">
+
+            </div>
+
+            <div class="klasa2">
+                <div class="srodek0" id="s0">
+                    <!-- MIASTO -->
+
+                    <!--	<input id="miasto_akcja_1" value="akcja" type="button">
 				<input id="miasto_akcja_2" value="akcja" type="button">
 				<input id="miasto_akcja_3" value="akcja" type="button">
 				<input id="miasto_akcja_4" value="akcja" type="button">-->
-				
-			</div>
-			
-			
-			<div class="srodek1" id="s1"><!-- KARCZMA -->
-				
-				<input id="karczma_akcja_1" value="Misja 1" type="button">
-				<input id="karczma_akcja_2" value="Misja 2" type="button">
-				<input id="karczma_akcja_3" value="Misja 3" type="button">
-				<input id="karczma_akcja_4" value="Misja 4" type="button">				
-				
-				
-			</div>
-			
-			
-			<div class="srodek2" id="s2"><!-- TARGOWISKO -->
-				
-				<input id="targowisko_akcja_1" value="Mały eliksir życia" type="button">
-				<input id="targowisko_akcja_2" value="Duży eliksir życia" type="button">
-				<input id="targowisko_akcja_3" value="Mały eliksir many" type="button">
-				<input id="targowisko_akcja_4" value="Duży eliksir many" type="button">	
-				
-			</div>
-			
-			
-			<div class="srodek3" id="s3"><!-- KUŹNIA -->
-				
-				<input id="kuznia_akcja_1" value="Ulepsz broń" type="button">
-				<input id="kuznia_akcja_2" value="Ulepsz zbroje" type="button">
-				<input id="kuznia_akcja_3" value="Ulepsz buty" type="button">
-				<input id="kuznia_akcja_4" value="Ulepsz rękawice" type="button">	
-				<input id="kuznia_akcja_5" value="Ulepsz hełm" type="button">	
-				
-			</div>
-		</div>
-		
-		<div class="klasa3">
 
-		<!-- <img src="obrazy/wojownik.jpg"/> <img src="obrazy/mag.jpg"/>-->
-		</div>
-		
-		<div class="klasa4">
-			
-			<table>
-				<tr>
-					<td colspan="7" class="naglowek_tabeli">STATYSTYKI</td>
-				</tr>
-				<tr>
-					<td>Poziom</td>
-					<td id="tabela_lvl">1</td>
-					<td>|</td>
-					<td>Doświadczenie</td>
-					<td id="tabela_exp1">1</td>
-					<td>/</td>
-					<td id="tabela_exp2">1</td>
-				</tr>
-				<tr>
-					<td>Atak</td>
-					<td id="tabela_atak">1</td>
-					<td>|</td>
-					<td>Obrona</td>
-					<td colspan="3" id="tabela_def">1</td>
-				</tr>
-				<tr>
-					<td>Zręczność</td>
-					<td id="tabela_dex">1</td>
-					<td>|</td>
-					<td>Punkty życia</td>
-					<td id="tabela_hp">1</td>
-					<td>/</td>
-					<td id="tabela_hp2">1</td>
-				</tr>
-				<tr>
-					<td>Siła</td>
-					<td id="tabela_str">1</td>
-					<td>|</td>
-					<td>Punkty many</td>
-					<td id="tabela_mana1">1</td>
-					<td>/</td>
-					<td id="tabela_mana2">1</td>
-				</tr>
-				<tr>
-					<td>Inteligencja</td>
-					<td id="tabela_int">1</td>
-					<td>|</td>
-					<td>Złoto</td>
-					<td colspan="3" id="tabela_zloto" >1</td>
-				</tr>
-			</table>
-			
-			
-			
-			
-			<table>
-			<tr>
-					<td colspan="2" class="naglowek_tabeli">EKWIPUNEK</td>
-			</tr>
-			<tr>
-					<td>Eliksir Hp Min</td>
-					<td>0</td>
-			</tr>
-			<tr>
-					<td>Eliksir Mp Min</td>
-					<td>0</td>
-			</tr>
-			<tr>
-					<td>Eliksir Hp Max</td>
-					<td>0</td>
-			</tr>
-			<tr>
-					<td>Eliksir Mp Max</td>
-					<td>0</td>
-			</tr>
-			<tr>
-					<td>item5</td>
-					<td>0</td>
-			</tr>
-			<tr>
-					<td>item6</td>
-					<td>0</td>
-			</tr>
-			</table>
-		
-		</div>
-	</div>
+                </div>
 
-</div>
+
+                <div class="srodek1" id="s1">
+                    <!-- KARCZMA -->
+
+                    <input id="karczma_akcja_1" value="Misja 1" type="button">
+                    <input id="karczma_akcja_2" value="Misja 2" type="button">
+                    <input id="karczma_akcja_3" value="Misja 3" type="button">
+                    <input id="karczma_akcja_4" value="Misja 4" type="button">
+
+
+                </div>
+
+
+                <div class="srodek2" id="s2">
+                    <!-- TARGOWISKO -->
+
+                    <input id="targowisko_akcja_1" value="Mały eliksir życia" type="button">
+                    <input id="targowisko_akcja_2" value="Duży eliksir życia" type="button">
+                    <input id="targowisko_akcja_3" value="Mały eliksir many" type="button">
+                    <input id="targowisko_akcja_4" value="Duży eliksir many" type="button">
+
+                </div>
+
+
+                <div class="srodek3" id="s3">
+                    <!-- KUŹNIA -->
+
+                    <input id="kuznia_akcja_1" value="Ulepsz broń" type="button">
+                    <input id="kuznia_akcja_2" value="Ulepsz zbroje" type="button">
+                    <input id="kuznia_akcja_3" value="Ulepsz buty" type="button">
+                    <input id="kuznia_akcja_4" value="Ulepsz rękawice" type="button">
+                    <input id="kuznia_akcja_5" value="Ulepsz hełm" type="button">
+
+                </div>
+            </div>
+
+            <div class="klasa3">
+
+                <!-- <img src="obrazy/wojownik.jpg"/> <img src="obrazy/mag.jpg"/>-->
+            </div>
+
+            <div class="klasa4">
+
+                <table>
+                    <tr>
+                        <td colspan="7" class="naglowek_tabeli">STATYSTYKI</td>
+                    </tr>
+                    <tr>
+                        <td>Poziom</td>
+                        <td id="tabela_lvl">1</td>
+                        <td>|</td>
+                        <td>Doświadczenie</td>
+                        <td id="tabela_exp1">1</td>
+                        <td>/</td>
+                        <td id="tabela_exp2">1</td>
+                    </tr>
+                    <tr>
+                        <td>Atak</td>
+                        <td id="tabela_atak">1</td>
+                        <td>|</td>
+                        <td>Obrona</td>
+                        <td colspan="3" id="tabela_def">1</td>
+                    </tr>
+                    <tr>
+                        <td>Zręczność</td>
+                        <td id="tabela_dex">1</td>
+                        <td>|</td>
+                        <td>Punkty życia</td>
+                        <td id="tabela_hp">1</td>
+                        <td>/</td>
+                        <td id="tabela_hp2">1</td>
+                    </tr>
+                    <tr>
+                        <td>Siła</td>
+                        <td id="tabela_str">1</td>
+                        <td>|</td>
+                        <td>Punkty many</td>
+                        <td id="tabela_mana1">1</td>
+                        <td>/</td>
+                        <td id="tabela_mana2">1</td>
+                    </tr>
+                    <tr>
+                        <td>Inteligencja</td>
+                        <td id="tabela_int">1</td>
+                        <td>|</td>
+                        <td>Złoto</td>
+                        <td colspan="3" id="tabela_zloto">1</td>
+                    </tr>
+                </table>
+
+
+
+
+                <table>
+                    <tr>
+                        <td colspan="2" class="naglowek_tabeli">EKWIPUNEK</td>
+                    </tr>
+                    <tr>
+                        <td>Eliksir Hp Min</td>
+                        <td id="min_hp">0</td>
+                    </tr>
+                    <tr>
+                        <td>Eliksir Mp Min</td>
+                        <td id="min_mp">0</td>
+                    </tr>
+                    <tr>
+                        <td>Eliksir Hp Max</td>
+                        <td id="max_hp">0</td>
+                    </tr>
+                    <tr>
+                        <td>Eliksir Mp Max</td>
+                        <td id="max_mp">0</td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+
+    </div>
 
 </body>
 
-</html> 
+</html>
