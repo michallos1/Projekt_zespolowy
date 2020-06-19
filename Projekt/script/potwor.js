@@ -17,14 +17,14 @@ class potwor {
     walka(Klasa) {
         do {
             this.Hp -= (Klasa.Attack - this.Def);
-            console.log('Hp potwora: ' + this.Hp);
+            console.log('Hp potwora: ' + parseInt(this.Hp,10));
 
             if (this.Hp < 1) {
                 return 1; //wygrana walka 
             }
 
             Klasa.Hp -= (this.Atk - Klasa.Def);
-            console.log("Hp postaci: " + Klasa.Hp);
+            console.log("Hp postaci: " + parseInt(Klasa.Hp,10));
         } while (Klasa.Hp > 0);
 
         return 0; // przegrana walka	
