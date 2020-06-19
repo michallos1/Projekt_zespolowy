@@ -186,10 +186,8 @@
                 if (p.walka(klasa) == 1) {
                     console.log(klasa.Gold);
                     console.log(klasa.Exp);
-                    klasa.Gold += klasa.Lvl * 3 + ((1 / 3) * klasa.Dex);
-                    klasa.Exp += klasa.Lvl + ((1 / 6) * klasa.Int);
                     klasa.Gold += (klasa.Lvl * 6) + klasa.Dex;
-                    klasa.Exp += (klasa.Lvl * 6) + klasa.Int;
+                    klasa.Exp += klasa.Lvl + klasa.Int;
                     alert('Misja zakończona powodzeniem!');
                     setStats();
                 } else {
@@ -200,16 +198,22 @@
             }
 
             function Misja2() {
-                if (Walka(klasa) == 1) {
-                    klasa.Gold += klasa.lvl + ((1 / 6) * klasa.Dex);
-                    klasa.Exp += klasa.lvl * 3 + ((1 / 3) * klasa.Int);
+               let level = klasa.Lvl;
+                console.log('Level postaci: ' + level);
+                p.ustaw(level);
+                if (p.walka(klasa) == 1) {
+                    console.log(klasa.Gold);
+                    console.log(klasa.Exp);
+                    klasa.Gold += klasa.Lvl + klasa.Dex;
+                    klasa.Exp += (klasa.Lvl * 6) + klasa.Int;
                     alert('Misja zakończona powodzeniem!');
+                    setStats();
                 } else {
                     alert('Poległeś w walce z potworem.');
                     klasa.Hp = 1;
+                    setStats();
                 }
             }
-
 
 
             function UpgreadWep() {
@@ -370,7 +374,16 @@
 				<input id="miasto_akcja_4" value="akcja" type="button">-->
 
                 </div>
-
+				
+				<div class="walka" id="w">
+					<!-- WALKA -->
+					
+					<input id="walka_akcja_1" value="Atakuj" type="button">
+                    <input id="walka_akcja_2" value="Mikstura życia" type="button">
+                    <input id="walka_akcja_3" value="Miktura many" type="button">
+                    <input id="walka_akcja_4" value="Uciekaj" type="button">
+				</div>
+				
 
                 <div class="srodek1" id="s1">
                     <!-- KARCZMA -->
