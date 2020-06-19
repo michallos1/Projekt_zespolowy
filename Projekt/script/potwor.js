@@ -5,8 +5,8 @@ class potwor {
     }
 
     ustaw(lvl) {
-        this.Hp += lvl * 5;
-        this.Atk += lvl;
+        this.Hp =10 + lvl * 5;
+        this.Atk =1 + lvl;
         console.log('Hp potwora: ' + parseInt(this.Hp,10));
         console.log('Atak potwora: ' + parseInt(this.Atk,10));
     }
