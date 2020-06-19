@@ -207,15 +207,14 @@
                 min_hp.innerHTML = klasa.Backpack[0];
                 max_hp.innerHTML = klasa.Backpack[1];
                 min_mp.innerHTML = klasa.Backpack[2];
-                max_mp.innerHTML = klasa.Backpack[3];
+                max_mp.innerHTML = klasa.Backpack[3]; 
 
             }
 
             Atak = document.getElementById('walka_akcja_1').addEventListener('click', Atakuj);
 
 
-            MisjaI = document.getElementById('walka').addEventListener('click', Misja1);
-            MisjaII = document.getElementById('karczma_akcja_2').addEventListener('click', Misja2);
+            Misja = document.getElementById('walka').addEventListener('click', Misja);
 
             Upg_wep = document.getElementById('kuznia_akcja_1').addEventListener('click', UpgreadWep);
             Upg_zbr = document.getElementById('kuznia_akcja_2').addEventListener('click', UpgreadChes);
@@ -230,7 +229,7 @@
             }
 
 
-            function Misja1() {
+            function Misja() {
                 let level = klasa.Lvl;
                 setWalka();
                 console.log('Level postaci: ' + level);
@@ -251,24 +250,6 @@
                      klasa.Hp = 1;
                      setStats();
                  }*/
-            }
-
-            function Misja2() {
-                let level = klasa.Lvl;
-                console.log('Level postaci: ' + level);
-                p.ustaw(level);
-                if (p.walka(klasa) == 1) {
-                    console.log(klasa.Gold);
-                    console.log(klasa.Exp);
-                    klasa.Gold += klasa.Lvl + klasa.Dex;
-                    klasa.Exp += (klasa.Lvl * 6) + klasa.Int;
-                    alert('Misja zakończona powodzeniem!');
-                    setStats();
-                } else {
-                    alert('Poległeś w walce z potworem.');
-                    klasa.Hp = 1;
-                    setStats();
-                }
             }
 
 
