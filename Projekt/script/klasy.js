@@ -39,7 +39,7 @@ class Wojownik extends Klasa {
         this.Int = this.Int + statywoj[0];
         this.Dex = this.Dex + statywoj[1];
         this.Str = this.Str + statywoj[2];
-        this.Lvl += 1;
+        this.Lvl = +1;
         this.ExpToLvlUp();
     }
 
@@ -60,10 +60,7 @@ class Wojownik extends Klasa {
         } else {
 
         }
-
     }
-
-
 }
 
 class Lucznik extends Klasa {
@@ -74,7 +71,7 @@ class Lucznik extends Klasa {
         this.Mana = 15;
         this.Attack = 0;
         this.Ekwipunek = new Eq();
-        this.Backpack = new Array(12);
+        this.Backpack = new Array(0, 0, 0, 0);
     }
 
     LevelUp(Int, Dex, Str) {
@@ -91,6 +88,18 @@ class Lucznik extends Klasa {
         this.MaxMana = 10 + this.Int;
     }
 
+    Update_backpack(slot, type) {
+        let curent = this.Backpack[slot];
+
+        if (type == 'add') {
+            this.Backpack[slot] = curent + 1;
+        } else if (type == 'dec') {
+            this.Backpack[slot] = curent - 1;
+        } else {
+
+        }
+    }
+
 }
 
 class Mag extends Klasa {
@@ -101,7 +110,7 @@ class Mag extends Klasa {
         this.Mana = 30;
         this.Attack = 0;
         this.Ekwipunek = new Eq();
-        this.Backpack = new Array(12);
+        this.Backpack = new Array(0, 0, 0, 0);
     }
 
     LevelUp(Int, Dex, Str) {
@@ -117,6 +126,18 @@ class Mag extends Klasa {
         this.Def = this.Ekwipunek.Armor + (this.Str / 2);
         this.MaxHp = 20 + this.Str;
         this.MaxMana = 30 + this.Int;
+    }
+
+    Update_backpack(slot, type) {
+        let curent = this.Backpack[slot];
+
+        if (type == 'add') {
+            this.Backpack[slot] = curent + 1;
+        } else if (type == 'dec') {
+            this.Backpack[slot] = curent - 1;
+        } else {
+
+        }
     }
 }
 

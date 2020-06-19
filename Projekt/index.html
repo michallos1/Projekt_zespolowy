@@ -135,6 +135,7 @@
             }
 
             function setStats() {
+                klasa.Update_stats();
                 int = document.getElementById('tabela_int');
                 atak = document.getElementById('tabela_atak');
                 dex = document.getElementById('tabela_dex');
@@ -143,9 +144,11 @@
                 hp = document.getElementById('tabela_hp');
                 hp2 = document.getElementById('tabela_hp2');
                 mana = document.getElementById('tabela_mana1');
+                mana2 = document.getElementById('tabela_mana2');
                 gold = document.getElementById('tabela_zloto');
                 exp = document.getElementById('tabela_exp1');
                 exp2 = document.getElementById('tabela_exp2');
+                //mikstury
                 min_hp = document.getElementById('min_hp');
                 max_hp = document.getElementById('max_hp');
                 min_mp = document.getElementById('min_mp');
@@ -157,12 +160,15 @@
                 dex.innerHTML = klasa.Dex;
                 def.innerHTML = klasa.Def;
                 str.innerHTML = klasa.Str;
+                hp2.innerHTML = klasa.MaxHp;
                 hp.innerHTML = klasa.Hp;
                 mana.innerHTML = klasa.Mana;
+                mana2.innerHTML = klasa.MaxMana;
                 gold.innerHTML = klasa.Gold;
                 exp.innerHTML = klasa.Exp;
                 exp2.innerHTML = klasa.ExpUp;
                 hp2.innerHTML = klasa.MaxHp;
+                //mikstury
                 min_hp.innerHTML = klasa.Backpack[0];
                 max_hp.innerHTML = klasa.Backpack[1];
                 min_mp.innerHTML = klasa.Backpack[2];
@@ -186,11 +192,12 @@
                 if (p.walka(klasa) == 1) {
                     console.log(klasa.Gold);
                     console.log(klasa.Exp);
-                    klasa.Gold += klasa.Lvl * 3 + ((1 / 3) * klasa.Dex);
-                    klasa.Exp += klasa.Lvl + ((1 / 6) * klasa.Int);
                     klasa.Gold += (klasa.Lvl * 6) + klasa.Dex;
                     klasa.Exp += (klasa.Lvl * 6) + klasa.Int;
                     alert('Misja zakończona powodzeniem!');
+                    if (klasa.Exp > klasa.ExpUp) {
+                        klasa.LevelUp();
+                    }
                     setStats();
                 } else {
                     alert('Poległeś w walce z potworem.');
@@ -364,10 +371,10 @@
                 <div class="srodek0" id="s0">
                     <!-- MIASTO -->
 
-                    <!--	<input id="miasto_akcja_1" value="akcja" type="button">
-				<input id="miasto_akcja_2" value="akcja" type="button">
-				<input id="miasto_akcja_3" value="akcja" type="button">
-				<input id="miasto_akcja_4" value="akcja" type="button">-->
+                    <input id="miasto_akcja_1" value="Uzyj mikstury na HP mała" type="button">
+                    <input id="miasto_akcja_2" value="Uzyj mikstury na HP duża" type="button">
+                    <input id="miasto_akcja_3" value="Uzyj mikstury na MP mała" type="button">
+                    <input id="miasto_akcja_4" value="Uzyj mikstury na MP duża" type="button">
 
                 </div>
 
