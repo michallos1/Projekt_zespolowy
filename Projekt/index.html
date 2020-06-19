@@ -202,6 +202,9 @@
 
             }
 
+			Atak = document.getElementById('walka_akcja_1').addEventListener('click', Atakuj);
+
+
             MisjaI = document.getElementById('walka').addEventListener('click', Misja1);
             MisjaII = document.getElementById('karczma_akcja_2').addEventListener('click', Misja2);
 
@@ -210,12 +213,21 @@
             Upg_buty = document.getElementById('kuznia_akcja_3').addEventListener('click', UpgreadBoots);
             Upg_rek = document.getElementById('kuznia_akcja_4').addEventListener('click', UpgreadGlove);
             Upg_helm = document.getElementById('kuznia_akcja_5').addEventListener('click', UpgreadHelm);
+	
+			function Atakuj() {
+			console.log('funkcja atakuj');
+			
+			
+			}
+
 
             function Misja1() {
                 let level = klasa.Lvl;
+				setWalka();
                 console.log('Level postaci: ' + level);
                 p.ustaw(level);
-                if (p.walka(klasa) == 1) {
+				
+               /* if (p.walka(klasa) == 1) {
                     console.log(klasa.Gold);
                     console.log(klasa.Exp);
                     klasa.Gold += (klasa.Lvl * 6) + klasa.Dex;
@@ -229,7 +241,7 @@
                     alert('Poległeś w walce z potworem.');
                     klasa.Hp = 1;
                     setStats();
-                }
+                }*/
             }
 
             function Misja2() {
