@@ -4,11 +4,11 @@
     <title>Miasto</title>
     <link rel="stylesheet" href="css/glowny.css">
     <script src="script/klasy.js" defer></script>
-	<script src="script/potwor.js" defer></script>
+    <script src="script/potwor.js" defer></script>
     <script>
         window.onload = function() {
             var klasa;
-			var p = new potwor;
+            var p = new potwor;
             let wojownik_w = document.getElementById('wojownik');
             let lucznik_w = document.getElementById('lucznik');
             let mag_w = document.getElementById('mag');
@@ -182,7 +182,7 @@
             Upg_helm = document.getElementById('kuznia_akcja_5').addEventListener('click', UpgreadHelm);
 
             function Misja1() {
-				p.ustaw(klasa);
+                p.ustaw(klasa);
                 if (p.walka(klasa) == 1) {
                     klasa.Gold += klasa.lvl * 3 + ((1 / 3) * klasa.Dex);
                     klasa.Exp += klasa.lvl + ((1 / 6) * klasa.Int);
@@ -289,31 +289,22 @@
                 if (wartosc == 'targowisko_akcja_1') {
                     let slot = 0;
                     klasa.Update_backpack(slot, 'add');
-
-                    console.log(klasa.Backpack[slot]);
-
-                    // wartosc.innerHTML = klasa.Backpack[0];
+                    document.getElementById('min_hp').innerHTML = klasa.Backpack[0];
                 }
                 if (wartosc == 'targowisko_akcja_2') {
                     let slot = 1;
                     klasa.Update_backpack(slot, 'add');
-                    console.log(klasa.Backpack[slot]);
-
-                    // wartosc.innerHTML = klasa.Backpack[1];
+                    document.getElementById('max_hp').innerHTML = klasa.Backpack[1];
                 }
                 if (wartosc == 'targowisko_akcja_3') {
                     let slot = 2;
                     klasa.Update_backpack(slot, 'add');
-                    console.log(klasa.Backpack[slot]);
-
-                    // wartosc.innerHTML = klasa.Backpack[3];
+                    document.getElementById('min_mp').innerHTML = klasa.Backpack[2];
                 }
                 if (wartosc == 'targowisko_akcja_4') {
                     let slot = 3;
                     klasa.Update_backpack(slot, 'add');
-                    console.log(klasa.Backpack[slot]);
-
-                    // wartosc.innerHTML = klasa.Backpack[4];
+                    document.getElementById('max_mp').innerHTML = klasa.Backpack[3];
                 }
 
             }
