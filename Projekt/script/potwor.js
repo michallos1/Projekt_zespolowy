@@ -9,22 +9,22 @@ class potwor {
         this.Hp += lvl * 5;
         this.Atk += lvl;
         this.Def += (1 / 3) * lvl;
-        console.log(this.Hp);
-        console.log(this.Atk);
-        console.log(this.Def);
+        console.log('Hp potwora: ' + this.Hp);
+        console.log('Atak potwora: ' + this.Atk);
+        console.log('Obrona potwora: ' + this.Def);
     }
 
     walka(Klasa) {
         do {
             this.Hp -= (Klasa.Attack - this.Def);
-            console.log(this.hp);
+            console.log('Hp potwora: ' + this.hp);
 
             if (this.Hp < 1) {
                 return 1; //wygrana walka 
             }
 
             Klasa.Hp -= (this.Atk - Klasa.Def);
-            console.log(Klasa.hp);
+            console.log("Hp postaci: " + Klasa.hp);
         } while (Klasa.Hp > 0);
 
         return 0; // przegrana walka	
