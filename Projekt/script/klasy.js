@@ -50,12 +50,12 @@ class Wojownik extends Klasa {
         this.MaxMana = 10 + this.Int;
     }
 
-    Update_backpack(slot, event) {
+    Update_backpack(slot, type) {
         curent = this.Backpack[slot];
 
-        if (event == 'add') {
+        if (type == 'add') {
             this.Backpack[slot] = +1;
-        } else if (event == 'dec') {
+        } else if (type == 'dec') {
             this.Backpack[slot] = -1;
         } else {
 
