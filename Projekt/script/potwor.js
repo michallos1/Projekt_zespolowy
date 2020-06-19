@@ -1,13 +1,14 @@
 class potwor {
-	constructor(int lvl){
-		this.Hp=10+(lvl*5);
-		this.Atk=1+lvl;
-		this.Def=1+((1/3)*lvl);
+	constructor(){
+		this.Hp=10;
+		this.Atk=1; 
+		this.Def=1; 
 	}
 }
 
-int walka (class Klasa){
-	potwor p = Klasa.lvl;
+walka (class Klasa){
+	potwor p;
+	p = ustaw(Klasa.lvl);
 	
 	do{
 		p.Hp-=(Klasa.Attack-p.Def);
@@ -18,4 +19,13 @@ int walka (class Klasa){
 		return 1; //wygrana walka 
 	
 	return 0; // przegrana walka	
+}
+
+ustaw (lvl) {
+	potwor p
+	p.Hp+=lvl*5; 
+	p.Atk+=lvl;
+	p.Def+=(1/3)*lvl;
+	
+	return p;
 }
