@@ -15,6 +15,11 @@ class potwor {
         do {
             this.Hp -= Klasa.Attack;
             console.log('Hp potwora: ' + parseInt(this.Hp, 10));
+			if(Klasa.Mana>=6)
+			{this.Hp -= Klasa.Int;
+			 Klasa.Mana-=6;}
+
+
 
             if (this.Hp < 1) {
                 return 1; //wygrana walka 
