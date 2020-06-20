@@ -213,6 +213,11 @@
 
                 walka = document.getElementById('w');
                 walka2 = document.getElementById('w2');
+				
+				srodek0.style.display = "none";
+                srodek1.style.display = "none";
+                srodek2.style.display = "none";
+                srodek3.style.display = "none";
 
                 walka.style.display = "none";
                 walka1.style.display = "block";
@@ -239,7 +244,7 @@
                 walka1.style.display = "none";
                 walka2.style.display = "block";
 
-                console.log('set walka1');
+                
 
             }
 
@@ -300,6 +305,7 @@
             Upg_helm = document.getElementById('kuznia_akcja_5').addEventListener('click', UpgreadHelm);
 
             function Atakuj() {
+			if(klasa.Hp > 3){
 				let level = klasa.Lvl;
 				p.ustaw(level);
                 console.log('funkcja atakuj');
@@ -318,7 +324,7 @@
 					klasa.Gold += add_gold;
                     klasa.Exp += add_exp;
 					
-                    alert('Misja zakończona powodzeniem!');
+                    
                     if (klasa.Exp > klasa.ExpUp) {
                         klasa.LevelUp();
                     }
@@ -339,7 +345,7 @@
                     element.appendChild(new_element3);
 
                 } else {
-                    alert('Poległeś w walce z potworem.');
+                    
                     klasa.Hp = 1;
                     new_element = document.createElement("p");
                     wartos = document.createTextNode('Przegrałeś walke z potworem');
@@ -347,7 +353,9 @@
                     element = document.getElementById('logi');
                     element.appendChild(new_element);
                     setStats();
-                }
+                }}else{
+				console.log('Nie możesz walczyć, jesteś ranny!');
+				}
             }
 
 
