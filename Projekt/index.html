@@ -300,12 +300,24 @@
             Upg_helm = document.getElementById('kuznia_akcja_5').addEventListener('click', UpgreadHelm);
 
             function Atakuj() {
+				let level = klasa.Lvl;
+				p.ustaw(level);
                 console.log('funkcja atakuj');
                 if (p.walka(klasa) == 1) {
+				
+					if(walka.style.display == 'block')
+					{
                     add_gold = (klasa.Lvl * 6) + klasa.Dex;
                     add_exp = klasa.Lvl + klasa.Int;
-                    klasa.Gold += add_gold;
+					}else if(walka1.style.display == 'block')
+					{
+                    add_gold = klasa.Lvl + klasa.Dex;
+                    add_exp = (klasa.Lvl * 6) + klasa.Int;
+					}
+					
+					klasa.Gold += add_gold;
                     klasa.Exp += add_exp;
+					
                     alert('Misja zakończona powodzeniem!');
                     if (klasa.Exp > klasa.ExpUp) {
                         klasa.LevelUp();
@@ -342,24 +354,25 @@
 
 
             function Misja1() {
-                let level = klasa.Lvl;
+                
                 setWalka();
                 console.log('Level postaci: ' + level);
-                p.ustaw(level);
+				
+                
             }
 
             function Misja2() {
-                let level = klasa.Lvl;
+                
                 setWalka1();
                 console.log('Level postaci: ' + level);
-                p.ustaw(level);
+                
             }
 
             function Misja3() {
-                let level = klasa.Lvl;
+                
                 setWalka2();
                 console.log('Level postaci: ' + level);
-                p.ustaw(level);
+                
             }
 
 
