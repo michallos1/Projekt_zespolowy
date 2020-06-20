@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="css/glowny.css">
     <script src="script/klasy.js" defer></script>
     <script src="script/potwor.js" defer></script>
+    <script src="script/potion.js" defer></script>
     <script>
         window.onload = function() {
             var klasa;
@@ -380,9 +381,9 @@
 
             function UpgreadWep() {
                 gold = klasa.Gold;
-                if (gold >= (klasa.lvl*10)) {
+                if (gold >= (klasa.lvl * 10)) {
                     klasa.Ekwipunek.Upgrade_wep();
-                    klasa.Gold = gold - (klasa.lvl*10);
+                    klasa.Gold = gold - (klasa.lvl * 10);
                     console.log(klasa.Gold);
                     console.log(klasa.Ekwipunek);
                 } else
@@ -394,9 +395,9 @@
 
             function UpgreadChes() {
                 gold = klasa.Gold;
-                if (gold >= (klasa.lvl*10)) {
+                if (gold >= (klasa.lvl * 10)) {
                     klasa.Ekwipunek.Upgrade_chest();
-                    klasa.Gold = gold - (klasa.lvl*10);
+                    klasa.Gold = gold - (klasa.lvl * 10);
                     console.log(klasa.Gold);
                     console.log(klasa.Ekwipunek);
                 } else
@@ -408,9 +409,9 @@
 
             function UpgreadBoots() {
                 gold = klasa.Gold;
-                if (gold >= (klasa.lvl*5)) {
+                if (gold >= (klasa.lvl * 5)) {
                     klasa.Ekwipunek.Upgrade_boots();
-                    klasa.Gold = gold - (klasa.lvl*5);
+                    klasa.Gold = gold - (klasa.lvl * 5);
                     console.log(klasa.Gold);
                     console.log(klasa.Ekwipunek);
                 } else
@@ -422,9 +423,9 @@
 
             function UpgreadGlove() {
                 gold = klasa.Gold;
-                if (gold >= (klasa.lvl*5)) {
+                if (gold >= (klasa.lvl * 5)) {
                     klasa.Ekwipunek.Upgrade_gl();
-                    klasa.Gold = gold - (klasa.lvl*5);
+                    klasa.Gold = gold - (klasa.lvl * 5);
                     console.log(klasa.Gold);
                     console.log(klasa.Ekwipunek);
                 } else
@@ -436,9 +437,9 @@
 
             function UpgreadHelm() {
                 gold = klasa.Gold;
-                if (gold >= (klasa.lvl*6)) {
+                if (gold >= (klasa.lvl * 6)) {
                     klasa.Ekwipunek.Upgrade_helm();
-                    klasa.Gold = gold - (klasa.lvl*6);
+                    klasa.Gold = gold - (klasa.lvl * 6);
                     console.log(klasa.Gold);
                     console.log(klasa.Ekwipunek);
                 } else
@@ -484,11 +485,22 @@
                     setStats();
                 }
             }
-
             let min_hp_use = document.getElementById('miasto_akcja_1').addEventListener('click', use_potion);
             let max_hp_use = document.getElementById('miasto_akcja_2').addEventListener('click', use_potion);
             let min_mp_use = document.getElementById('miasto_akcja_3').addEventListener('click', use_potion);
             let max_mp_use = document.getElementById('miasto_akcja_4').addEventListener('click', use_potion);
+            document.getElementById('walka_akcja_2').addEventListener('click', use_potion);
+            document.getElementById('walka_akcja_3').addEventListener('click', use_potion);
+            document.getElementById('walka_akcja_4').addEventListener('click', use_potion);
+            document.getElementById('walka_akcja_5').addEventListener('click', use_potion);
+            document.getElementById('walka_akcja_21').addEventListener('click', use_potion);
+            document.getElementById('walka_akcja_31').addEventListener('click', use_potion);
+            document.getElementById('walka_akcja_41').addEventListener('click', use_potion);
+            document.getElementById('walka_akcja_51').addEventListener('click', use_potion);
+            document.getElementById('walka_akcja_22').addEventListener('click', use_potion);
+            document.getElementById('walka_akcja_32').addEventListener('click', use_potion);
+            document.getElementById('walka_akcja_42').addEventListener('click', use_potion);
+            document.getElementById('walka_akcja_52').addEventListener('click', use_potion);
 
             function use_potion(event) {
 
@@ -549,6 +561,210 @@
                             klasa.Mana += 30;
                             klasa.Backpack[3] -= 1;
                             setStats();
+                        } else {
+                            klasa.Mana = klasa.MaxMana;
+                            klasa.Backpack[3] -= 1;
+                            setStats();
+                        }
+                    }
+                }
+
+                if (event.target.id == 'walka_akcja_2') {
+
+                    if (klasa.Backpack[0] >= 1 && !(klasa.MaxHp == klasa.Hp)) {
+
+                        if (klasa.MaxHp - klasa.Hp >= 10) {
+                            klasa.Hp += 10;
+                            klasa.Backpack[0] -= 1;
+                            setStats();
+
+                        } else {
+                            klasa.Hp = klasa.MaxHp;
+                            klasa.Backpack[0] -= 1;
+                            setStats();
+                        }
+                    }
+                }
+
+                if (event.target.id == 'walka_akcja_3') {
+
+                    if (klasa.Backpack[1] >= 1 && !(klasa.MaxHp == klasa.Hp)) {
+
+                        if (klasa.MaxHp - klasa.Hp >= 30) {
+                            klasa.Hp += 30;
+                            klasa.Backpack[1] -= 1;
+                            setStats();
+
+                        } else {
+                            klasa.Hp = klasa.MaxHp;
+                            klasa.Backpack[1] -= 1;
+                            setStats();
+                        }
+                    }
+                }
+
+                if (event.target.id == 'walka_akcja_4') {
+
+                    if (klasa.Backpack[2] >= 1 && !(klasa.MaxMana == klasa.Mana)) {
+
+                        if (klasa.MaxMana - klasa.Mana >= 10) {
+                            klasa.Mana += 10;
+                            klasa.Backpack[2] -= 1;
+                            setStats();
+
+                        } else {
+                            klasa.Hp = klasa.MaxMana;
+                            klasa.Backpack[2] -= 1;
+                            setStats();
+                        }
+                    }
+                }
+
+                if (event.target.id == 'walka_akcja_5') {
+
+                    if (klasa.Backpack[3] >= 1 && !(klasa.MaxMana == klasa.Mana)) {
+
+                        if (klasa.MaxMana - klasa.Mana >= 30) {
+                            klasa.Mana += 30;
+                            klasa.Backpack[3] -= 1;
+                            setStats();
+
+                        } else {
+                            klasa.Mana = klasa.MaxMana;
+                            klasa.Backpack[3] -= 1;
+                            setStats();
+                        }
+                    }
+                }
+
+                if (event.target.id == 'walka_akcja_21') {
+
+                    if (klasa.Backpack[0] >= 1 && !(klasa.MaxHp == klasa.Hp)) {
+
+                        if (klasa.MaxHp - klasa.Hp >= 10) {
+                            klasa.Hp += 10;
+                            klasa.Backpack[0] -= 1;
+                            setStats();
+
+                        } else {
+                            klasa.MaxHp = klasa.Hp;
+                            klasa.Backpack[0] -= 1;
+                            setStats();
+                        }
+                    }
+                }
+
+                if (event.target.id == 'walka_akcja_22') {
+
+                    if (klasa.Backpack[0] >= 1 && !(klasa.MaxHp == klasa.Hp)) {
+
+                        if (klasa.MaxHp - klasa.Hp >= 10) {
+                            klasa.Hp += 10;
+                            klasa.Backpack[0] -= 1;
+                            setStats();
+
+                        } else {
+                            klasa.MaxHp = klasa.Hp;
+                            klasa.Backpack[0] -= 1;
+                            setStats();
+                        }
+                    }
+                }
+
+                if (event.target.id == 'walka_akcja_31') {
+
+                    if (klasa.Backpack[1] >= 1 && !(klasa.MaxHp == klasa.Hp)) {
+
+                        if (klasa.MaxHp - klasa.Hp >= 30) {
+                            klasa.Hp += 30;
+                            klasa.Backpack[1] -= 1;
+                            setStats();
+
+                        } else {
+                            klasa.Hp = klasa.MaxHp;
+                            klasa.Backpack[1] -= 1;
+                            setStats();
+                        }
+                    }
+                }
+
+                if (event.target.id == 'walka_akcja_32') {
+
+                    if (klasa.Backpack[1] >= 1 && !(klasa.MaxHp == klasa.Hp)) {
+
+                        if (klasa.MaxHp - klasa.Hp >= 30) {
+                            klasa.Hp += 30;
+                            klasa.Backpack[1] -= 1;
+                            setStats();
+
+                        } else {
+                            klasa.Hp = klasa.MaxHp;
+                            klasa.Backpack[1] -= 1;
+                            setStats();
+                        }
+                    }
+                }
+
+                if (event.target.id == 'walka_akcja_41') {
+
+                    if (klasa.Backpack[2] >= 1 && !(klasa.MaxMana == klasa.Mana)) {
+
+                        if (klasa.MaxMana - klasa.Mana >= 10) {
+                            klasa.Mana += 10;
+                            klasa.Backpack[2] -= 1;
+                            setStats();
+
+                        } else {
+                            klasa.Mana = klasa.MaxMana;
+                            klasa.Backpack[2] -= 1;
+                            setStats();
+                        }
+                    }
+                }
+
+                if (event.target.id == 'walka_akcja_42') {
+
+                    if (klasa.Backpack[2] >= 1 && !(klasa.MaxMana == klasa.Mana)) {
+
+                        if (klasa.MaxMana - klasa.Mana >= 10) {
+                            klasa.Mana += 10;
+                            klasa.Backpack[2] -= 1;
+                            setStats();
+
+                        } else {
+                            klasa.Mana = klasa.MaxMana;
+                            klasa.Backpack[2] -= 1;
+                            setStats();
+                        }
+                    }
+                }
+
+                if (event.target.id == 'walka_akcja_51') {
+
+                    if (klasa.Backpack[3] >= 1 && !(klasa.MaxMana == klasa.Mana)) {
+
+                        if (klasa.MaxMana - klasa.Mana >= 30) {
+                            klasa.Mana += 30;
+                            klasa.Backpack[3] -= 1;
+                            setStats();
+
+                        } else {
+                            klasa.Mana = klasa.MaxMana;
+                            klasa.Backpack[3] -= 1;
+                            setStats();
+                        }
+                    }
+                }
+
+                if (event.target.id == 'walka_akcja_52') {
+
+                    if (klasa.Backpack[3] >= 1 && !(klasa.MaxMana == klasa.Mana)) {
+
+                        if (klasa.MaxMana - klasa.Mana >= 30) {
+                            klasa.Mana += 30;
+                            klasa.Backpack[3] -= 1;
+                            setStats();
+
                         } else {
                             klasa.Mana = klasa.MaxMana;
                             klasa.Backpack[3] -= 1;
@@ -638,12 +854,12 @@
 
                     </div>
 
-                    <input id="walka_akcja_1" value="Atakuj" type="button">
-                    <input id="walka_akcja_2" value="Mikstura życia mała" type="button">
-                    <input id="walka_akcja_3" value="Mikstura życia duża" type="button">
-                    <input id="walka_akcja_4" value="Miktura many mała" type="button">
-                    <input id="walka_akcja_5" value="Mikstura many duża" type="button">
-                    <input id="walka_akcja_6" value="Uciekaj" type="button">
+                    <input id="walka_akcja_11" value="Atakuj" type="button">
+                    <input id="walka_akcja_21" value="Mikstura życia mała" type="button">
+                    <input id="walka_akcja_31" value="Mikstura życia duża" type="button">
+                    <input id="walka_akcja_41" value="Miktura many mała" type="button">
+                    <input id="walka_akcja_51" value="Mikstura many duża" type="button">
+                    <input id="walka_akcja_61" value="Uciekaj" type="button">
                 </div>
 
                 <div class="walka2" id="w2">
@@ -653,12 +869,12 @@
 
                     </div>
 
-                    <input id="walka_akcja_1" value="Atakuj" type="button">
-                    <input id="walka_akcja_2" value="Mikstura życia mała" type="button">
-                    <input id="walka_akcja_3" value="Mikstura życia duża" type="button">
-                    <input id="walka_akcja_4" value="Miktura many mała" type="button">
-                    <input id="walka_akcja_5" value="Mikstura many duża" type="button">
-                    <input id="walka_akcja_6" value="Uciekaj" type="button">
+                    <input id="walka_akcja_12" value="Atakuj" type="button">
+                    <input id="walka_akcja_22" value="Mikstura życia mała" type="button">
+                    <input id="walka_akcja_32" value="Mikstura życia duża" type="button">
+                    <input id="walka_akcja_42" value="Miktura many mała" type="button">
+                    <input id="walka_akcja_52" value="Mikstura many duża" type="button">
+                    <input id="walka_akcja_62" value="Uciekaj" type="button">
                 </div>
 
 
@@ -675,6 +891,7 @@
                 <div class="srodek2" id="s2">
                     <!-- TARGOWISKO -->
 
+
                     <input id="targowisko_akcja_1" value="Mały eliksir życia" type="button">
                     <input id="targowisko_akcja_2" value="Duży eliksir życia" type="button">
                     <input id="targowisko_akcja_3" value="Mały eliksir many" type="button">
@@ -690,6 +907,7 @@
 						Duża mikstura many.............14<br/>
 					
 					</div>
+
 
                 </div>
 
