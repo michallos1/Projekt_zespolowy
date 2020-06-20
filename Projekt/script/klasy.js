@@ -127,8 +127,8 @@ class Mag extends Klasa {
         this.Ekwipunek.Set_armor();
         this.Attack = this.Ekwipunek.Weapon + (this.Int / 2);
         this.Def = this.Ekwipunek.Armor + (this.Str / 2);
-        this.MaxHp = 20 + this.Str;
-        this.MaxMana = 30 + this.Int;
+        this.MaxHp = 23 + this.Str;
+        this.MaxMana = 40 + this.Int;
     }
 
     Update_backpack(slot, type) {
