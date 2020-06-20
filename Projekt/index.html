@@ -380,9 +380,9 @@
 
             function UpgreadWep() {
                 gold = klasa.Gold;
-                if (gold >= 10) {
+                if (gold >= (klasa.lvl*10)) {
                     klasa.Ekwipunek.Upgrade_wep();
-                    klasa.Gold = gold - 10;
+                    klasa.Gold = gold - (klasa.lvl*10);
                     console.log(klasa.Gold);
                     console.log(klasa.Ekwipunek);
                 } else
@@ -394,9 +394,9 @@
 
             function UpgreadChes() {
                 gold = klasa.Gold;
-                if (gold >= 10) {
+                if (gold >= (klasa.lvl*10)) {
                     klasa.Ekwipunek.Upgrade_chest();
-                    klasa.Gold = gold - 10;
+                    klasa.Gold = gold - (klasa.lvl*10);
                     console.log(klasa.Gold);
                     console.log(klasa.Ekwipunek);
                 } else
@@ -408,9 +408,9 @@
 
             function UpgreadBoots() {
                 gold = klasa.Gold;
-                if (gold >= 5) {
+                if (gold >= (klasa.lvl*5)) {
                     klasa.Ekwipunek.Upgrade_boots();
-                    klasa.Gold = gold - 5;
+                    klasa.Gold = gold - (klasa.lvl*5);
                     console.log(klasa.Gold);
                     console.log(klasa.Ekwipunek);
                 } else
@@ -422,9 +422,9 @@
 
             function UpgreadGlove() {
                 gold = klasa.Gold;
-                if (gold >= 5) {
+                if (gold >= (klasa.lvl*5)) {
                     klasa.Ekwipunek.Upgrade_gl();
-                    klasa.Gold = gold - 5;
+                    klasa.Gold = gold - (klasa.lvl*5);
                     console.log(klasa.Gold);
                     console.log(klasa.Ekwipunek);
                 } else
@@ -436,9 +436,9 @@
 
             function UpgreadHelm() {
                 gold = klasa.Gold;
-                if (gold >= 6) {
+                if (gold >= (klasa.lvl*6)) {
                     klasa.Ekwipunek.Upgrade_helm();
-                    klasa.Gold = gold - 6;
+                    klasa.Gold = gold - (klasa.lvl*6);
                     console.log(klasa.Gold);
                     console.log(klasa.Ekwipunek);
                 } else
@@ -457,30 +457,30 @@
             function Update_backpack(event) {
                 let wartosc = event.target.id;
 
-                if (wartosc == 'targowisko_akcja_1' && klasa.Gold > 3) {
+                if (wartosc == 'targowisko_akcja_1' && klasa.Gold > 8) {
                     let slot = 0;
                     klasa.Update_backpack(slot, 'add');
-                    klasa.Gold = klasa.Gold - 3;
+                    klasa.Gold = klasa.Gold - 8;
                     setStats();
                 }
 
 
-                if (wartosc == 'targowisko_akcja_2' && klasa.Gold > 5) {
+                if (wartosc == 'targowisko_akcja_2' && klasa.Gold > 14) {
                     let slot = 1;
                     klasa.Update_backpack(slot, 'add');
-                    klasa.Gold = klasa.Gold - 5;
+                    klasa.Gold = klasa.Gold - 14;
                     setStats();
                 }
-                if (wartosc == 'targowisko_akcja_3' && klasa.Gold > 3) {
+                if (wartosc == 'targowisko_akcja_3' && klasa.Gold > 8) {
                     let slot = 2;
                     klasa.Update_backpack(slot, 'add');
-                    klasa.Gold = klasa.Gold - 3;
+                    klasa.Gold = klasa.Gold - 8;
                     setStats();
                 }
-                if (wartosc == 'targowisko_akcja_4' && klasa.Gold > 5) {
+                if (wartosc == 'targowisko_akcja_4' && klasa.Gold > 14) {
                     let slot = 3;
                     klasa.Update_backpack(slot, 'add');
-                    klasa.Gold = klasa.Gold - 5;
+                    klasa.Gold = klasa.Gold - 14;
                     setStats();
                 }
             }
