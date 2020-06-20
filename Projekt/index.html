@@ -361,20 +361,20 @@
 
 
 
-            function Misja1() { 
+            function Misja1() {
                 setWalka();
-                             
+
             }
 
-            function Misja2() {  
+            function Misja2() {
                 setWalka1();
-            
+
             }
 
-            function Misja3() {  
+            function Misja3() {
                 setWalka2();
-            
-			}     
+
+            }
 
 
 
@@ -496,53 +496,62 @@
 
                 if (event.target.id == 'miasto_akcja_1') {
 
-                    if (klasa.Backpack[0] >= 1) {
+                    if (klasa.Backpack[0] >= 1 && !(klasa.MaxHp == klasa.Hp)) {
 
                         if (klasa.MaxHp - klasa.Hp >= 10) {
-                            klasa.Hp = +10;
+                            klasa.Hp += 10;
+                            klasa.Backpack[0] -= 1;
                             setStats();
+
                         } else {
                             klasa.Hp = klasa.MaxHp;
+                            klasa.Backpack[0] -= 1;
                             setStats();
                         }
                     }
                 }
 
-                if (event.target.id == 'miasto_akcja_2') {
+                if (event.target.id == 'miasto_akcja_2' && !(klasa.MaxHp == klasa.Hp)) {
 
                     if (klasa.Backpack[1] >= 1) {
                         if (klasa.MaxHp - klasa.Hp >= 30) {
-                            klasa.Hp = +30;
+                            klasa.Hp += 30;
+                            klasa.Backpack[1] -= 1;
                             setStats();
                         } else {
                             klasa.Hp = klasa.MaxHp;
+                            klasa.Backpack[1] -= 1;
                             setStats();
                         }
                     }
                 }
 
-                if (event.target.id == 'miasto_akcja_3') {
+                if (event.target.id == 'miasto_akcja_3' && !(klasa.MaxMana == klasa.Mana)) {
 
                     if (klasa.Backpack[2] >= 1) {
                         if (klasa.MaxMana - klasa.Mana >= 10) {
-                            klasa.Mana = +10;
+                            klasa.Mana += 10;
+                            klasa.Backpack[2] -= 1;
                             setStats();
                         } else {
                             klasa.Mana = klasa.MaxMana;
+                            klasa.Backpack[2] -= 1;
                             setStats();
                         }
                     }
                 }
 
 
-                if (event.target.id == 'miasto_akcja_4') {
+                if (event.target.id == 'miasto_akcja_4' && !(klasa.MaxMana == klasa.Mana)) {
 
                     if (klasa.Backpack[3] >= 1) {
                         if (klasa.MaxMana - klasa.Mana >= 10) {
-                            klasa.Mana = +10;
+                            klasa.Mana += 30;
+                            klasa.Backpack[3] -= 1;
                             setStats();
                         } else {
                             klasa.Mana = klasa.MaxMana;
+                            klasa.Backpack[3] -= 1;
                             setStats();
                         }
                     }
