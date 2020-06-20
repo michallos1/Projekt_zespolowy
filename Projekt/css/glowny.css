@@ -237,17 +237,23 @@ input[type="button"]:hover {
     font-size: 40px;
 }
 
-.cennik
-{
-	background: url(../obrazy/papirus.jpg) center/100% no-repeat;
-	/*background-color: #DEB887;*/
+.cennik{
+
+	background-color: #DEB887;
+	opacity: 0.8;
     color: #000;
-    width: 20%;
-    height: 40%;
+    width: 210px;
+    height: 200px;
     margin-left: 5%;
 	margin-top: 20%;
-	padding-top:1%;
-	padding-left:1%;
+	padding:5px;
+	font-size:15px;
+	font-family:  cursive;
+
 }
 
+.cennik p{
 
+	font-size: 30px;
+	text-align:center;
+}
