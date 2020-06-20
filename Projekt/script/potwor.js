@@ -31,8 +31,8 @@ class potwor {
 
         do {
 
-            at1 = Math.random() * (this.Atk + 5) + this.Atk;
-            at2 = Math.random() * (this.Atk + 1) + (this.Atk / 2);
+            let at1 = Math.random() * (this.Atk + 5) + this.Atk;
+            let at2 = Math.random() * (this.Atk + 1) + (this.Atk / 2);
             console.log('At1: ' + at1 + " At2: " + at2);
             this.Hp -= Klasa.Attack;
             console.log('Hp potwora: ' + parseInt(this.Hp, 10));
@@ -47,7 +47,8 @@ class potwor {
         } while (Klasa.Hp > 0);
     }
 
-    random(min, max) {
-        return Math.random() * (max - min) + min;
-    }
 };
+
+function random(min, max) {
+    return Math.random() * (max - min) + min;
+}

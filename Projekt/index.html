@@ -5,7 +5,6 @@
     <link rel="stylesheet" href="css/glowny.css">
     <script src="script/klasy.js" defer></script>
     <script src="script/potwor.js" defer></script>
-    <script src="script/potion.js" defer></script>
     <script>
         window.onload = function() {
             var klasa;
@@ -293,7 +292,9 @@
 
             }
 
-            Atak = document.getElementById('walka_akcja_1').addEventListener('click', Atakuj);
+            document.getElementById('walka_akcja_1').addEventListener('click', Atakuj);
+            document.getElementById('walka_akcja_11').addEventListener('click', Atakuj);
+            document.getElementById('walka_akcja_12').addEventListener('click', Atakuj2);
 
             Misja1 = document.getElementById('walka').addEventListener('click', Misja1);
             Misja2 = document.getElementById('walka1').addEventListener('click', Misja2);
@@ -306,6 +307,7 @@
             Upg_helm = document.getElementById('kuznia_akcja_5').addEventListener('click', UpgreadHelm);
 
             function Atakuj() {
+
                 if (klasa.Hp > 3) {
                     let level = klasa.Lvl;
                     p.ustaw(level);
@@ -315,9 +317,11 @@
                         if (walka.style.display == 'block') {
                             add_gold = (klasa.Lvl * 6) + klasa.Dex;
                             add_exp = klasa.Lvl + klasa.Int;
+                            element = document.getElementById('logi');
                         } else if (walka1.style.display == 'block') {
                             add_gold = klasa.Lvl + klasa.Dex;
                             add_exp = (klasa.Lvl * 6) + klasa.Int;
+                            element = document.getElementById('logi2');
                         }
 
                         klasa.Gold += add_gold;
@@ -328,7 +332,7 @@
                             klasa.LevelUp();
                         }
                         setStats();
-                        element = document.getElementById('logi');
+
 
 
                         new_element = document.createElement("section");
@@ -351,14 +355,64 @@
                         new_element = document.createElement("p");
                         wartos = document.createTextNode('Przegrałeś walke z potworem');
                         new_element.appendChild(wartos);
-                        element = document.getElementById('logi');
                         element.appendChild(new_element);
                         setStats();
                     }
                 } else {
-                    console.log('Nie możesz walczyć, jesteś ranny!');
+                    alert('Nie możesz walczyć, jesteś ranny!');
                 }
             }
+
+            function Atakuj2() {
+
+                if (klasa.Hp > 3) {
+                    let level = klasa.Lvl;
+                    p.ustaw(level);
+                    console.log('funkcja atakuj');
+                    if (p.walka_boss(klasa) == 1) {
+                        add_gold = (klasa.Lvl * 6) + klasa.Dex;
+                        add_exp = klasa.Lvl + klasa.Int;
+
+                        klasa.Gold += add_gold;
+                        klasa.Exp += add_exp;
+
+                        if (klasa.Exp > klasa.ExpUp) {
+                            klasa.LevelUp();
+                        }
+                        setStats();
+                        element = document.getElementById('logi3');
+
+
+                        new_element = document.createElement("section");
+                        new_element2 = document.createElement("section");
+                        new_element3 = document.createElement("section");
+                        wartos = document.createTextNode('Wygrałeś walke z potworem');
+                        wartos2 = document.createTextNode('Otrzymałeś: ' + add_exp + ' doświadczenia');
+                        wartos3 = document.createTextNode('Otrzymałeś: ' + add_gold + ' złota');
+                        new_element.appendChild(wartos);
+                        new_element2.appendChild(wartos2);
+                        new_element3.appendChild(wartos3);
+
+                        element.appendChild(new_element);
+                        element.appendChild(new_element2);
+                        element.appendChild(new_element3);
+
+                    } else {
+
+                        klasa.Hp = 1;
+                        new_element = document.createElement("section");
+                        wartos = document.createTextNode('Przegrałeś walke z potworem');
+                        new_element.appendChild(wartos);
+                        element = document.getElementById('logi3');
+                        element.appendChild(new_element);
+                        setStats();
+                    }
+                } else {
+                    alert('Nie możesz walczyć, jesteś ranny!');
+                }
+            }
+
+
 
 
 
@@ -850,7 +904,7 @@
                 <div class="walka1" id="w1">
                     <!-- WALKA 1-->
 
-                    <div class="logi">
+                    <div class="logi" id="logi2">
 
                     </div>
 
@@ -865,7 +919,7 @@
                 <div class="walka2" id="w2">
                     <!-- WALKA 2-->
 
-                    <div class="logi">
+                    <div class="logi" id="logi3">
 
                     </div>
 
