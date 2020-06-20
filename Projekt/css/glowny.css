@@ -155,6 +155,18 @@ input[type="button"]:hover {
     height: 5%;
     width: 12%;
 }
+.klasa2 .walka1 input[type="button"] {
+    margin-top: 8%;
+    margin-left: 9%;
+    height: 5%;
+    width: 12%;
+}
+.klasa2 .walka2 input[type="button"] {
+    margin-top: 8%;
+    margin-left: 9%;
+    height: 5%;
+    width: 12%;
+}
 
 .klasa2 .srodek0 {
     width: 100%;
