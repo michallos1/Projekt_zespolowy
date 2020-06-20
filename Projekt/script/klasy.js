@@ -44,6 +44,7 @@ class Wojownik extends Klasa {
     }
 
     Update_stats(Ekwipunek, Int, Dex, Str, Def, Mana, Attack) {
+        this.Ekwipunek.Set_armor();
         this.Attack = this.Ekwipunek.Weapon + (this.Str / 3);
         this.Def = this.Ekwipunek.Armor + (this.Str / 2);
         this.MaxHp = 30 + this.Str;
@@ -82,6 +83,7 @@ class Lucznik extends Klasa {
         this.ExpToLvlUp();
     }
     Update_stats(Ekwipunek, Int, Dex, Str, Def, Mana, Attack) {
+        this.Ekwipunek.Set_armor();
         this.Attack = this.Ekwipunek.Weapon + (this.Dex / 2);
         this.Def = this.Ekwipunek.Armor + (this.Str / 2);
         this.MaxHp = 25 + this.Str;
@@ -122,6 +124,7 @@ class Mag extends Klasa {
     }
 
     Update_stats(Ekwipunek, Int, Dex, Str, Def, Mana, Attack) {
+        this.Ekwipunek.Set_armor();
         this.Attack = this.Ekwipunek.Weapon + (this.Int / 2);
         this.Def = this.Ekwipunek.Armor + (this.Str / 2);
         this.MaxHp = 20 + this.Str;
@@ -168,8 +171,9 @@ class Eq {
     Upgrade_helm() {
         this.Helm = 2 + this.Helm;
     }
-    Set_armor(Glove, Boots, Chest, Helm) {
+    Set_armor() {
         this.Armor = this.Glove + this.Boots + this.Chest + this.Helm;
+
     }
 
 
