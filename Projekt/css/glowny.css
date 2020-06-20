@@ -40,7 +40,7 @@ body {
     height: 50%;
     width: 20%;
     background-color: #100705;
-    background: url(../obrazy/wojownik.jpg);
+    /*background: url(../obrazy/wojownik.jpg);*/
 }
 
 .klasa3 img {
@@ -119,30 +119,28 @@ input[type="button"]:hover {
     color: #fff;
 }
 
-.klasa2 .walka{
-	width: 100%;
-	height: 100%;
-	display: none;
-	background: url(../obrazy/las.jpg) center/100% no-repeat;
+.klasa2 .walka {
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: url(../obrazy/las.jpg) center/100% no-repeat;
 }
 
-.walka .logi
-{
-	background-color: #000;
-	color: #fff;
-	opacity: 0.8;
-	width: 30%;
-	height: 80%;
-	margin-left: 25%;
+.walka .logi {
+    background-color: #000;
+    color: #fff;
+    opacity: 0.8;
+    width: 30%;
+    height: 80%;
+    margin-left: 25%;
 }
 
-.klasa2 .walka input[type="button"]
-{
-	margin-top: 8%;
-	margin-left: 9%;
-	height: 5%;
+.klasa2 .walka input[type="button"] {
+    margin-top: 8%;
+    margin-left: 9%;
+    height: 5%;
     width: 12%;
-}	
+}
 
 .klasa2 .srodek0 {
     width: 100%;
@@ -163,7 +161,6 @@ input[type="button"]:hover {
     height: 100%;
     display: none;
     background: url(../obrazy/targowisko.jpg) center/100% no-repeat;
-
 }
 
 .klasa2 .srodek3 {

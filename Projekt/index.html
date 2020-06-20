@@ -20,10 +20,10 @@
             function setWojownik() {
                 tlo1 = document.getElementById('t1');
                 tlo = document.getElementById('t');
-
+                image_postac = document.getElementById('klasa3');
                 tlo1.style.display = "none";
                 tlo.style.display = "flex";
-
+                image_postac.style.background = "url(obrazy/wojownik.jpg)";
                 var a = wojownik;
                 const wojo_s = new Wojownik();
 
@@ -43,12 +43,14 @@
             function setLucznik() {
                 tlo1 = document.getElementById('t1');
                 tlo = document.getElementById('t');
-
+                image_postac = document.getElementById('klasa3');
                 tlo1.style.display = "none";
                 tlo.style.display = "flex";
-
+                image_postac.style.background = "url(obrazy/lucznik.jpg)";
                 var a = lucznik;
                 const lucz_s = new Lucznik();
+
+
 
                 klasa = lucz_s;
                 klasa.LevelUp();
@@ -65,10 +67,10 @@
             function setMag() {
                 tlo1 = document.getElementById('t1');
                 tlo = document.getElementById('t');
-
+                image_postac = document.getElementById('klasa3')
                 tlo1.style.display = "none";
                 tlo.style.display = "flex";
-
+                image_postac.style.background = "url(obrazy/mag.jpg)";
                 var a = mag;
                 const mag_s = new Mag();
 
@@ -88,14 +90,14 @@
             let miasto = document.getElementById('miasto');
             let kuznia = document.getElementById('kuznia');
             let walka = document.getElementById('walka');
-			let walka1 = document.getElementById('walka1');
+            let walka1 = document.getElementById('walka1');
 
             miasto.addEventListener('click', setMiasto);
             karczma.addEventListener('click', setKarczma);
             targowisko.addEventListener('click', setTargowisko);
             kuznia.addEventListener('click', setKuznia);
             walka.addEventListener('click', setWalka);
-			walka1.addEventListener('click', setWalka);
+            walka1.addEventListener('click', setWalka);
 
 
 
@@ -209,14 +211,14 @@
                 min_hp.innerHTML = klasa.Backpack[0];
                 max_hp.innerHTML = klasa.Backpack[1];
                 min_mp.innerHTML = klasa.Backpack[2];
-                max_mp.innerHTML = klasa.Backpack[3]; 
+                max_mp.innerHTML = klasa.Backpack[3];
 
             }
 
             Atak = document.getElementById('walka_akcja_1').addEventListener('click', Atakuj);
 
             Misja1 = document.getElementById('walka').addEventListener('click', Misja1);
-			Misja2 = document.getElementById('walka1').addEventListener('click', Misja2);
+            Misja2 = document.getElementById('walka1').addEventListener('click', Misja2);
 
             Upg_wep = document.getElementById('kuznia_akcja_1').addEventListener('click', UpgreadWep);
             Upg_zbr = document.getElementById('kuznia_akcja_2').addEventListener('click', UpgreadChes);
@@ -253,8 +255,8 @@
                      setStats();
                  }*/
             }
-			
-			function Misja2() {
+
+            function Misja2() {
                 let level = klasa.Lvl;
                 setWalka();
                 console.log('Level postaci: ' + level);
@@ -556,7 +558,7 @@
                 </div>
             </div>
 
-            <div class="klasa3">
+            <div class="klasa3" id="klasa3">
 
                 <!-- <img src="obrazy/wojownik.jpg"/> <img src="obrazy/mag.jpg"/>-->
             </div>
