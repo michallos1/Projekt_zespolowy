@@ -39,7 +39,7 @@ class Wojownik extends Klasa {
         this.Int = this.Int + statywoj[0];
         this.Dex = this.Dex + statywoj[1];
         this.Str = this.Str + statywoj[2];
-        this.Lvl = +1;
+        this.Lvl += 1;
         this.ExpToLvlUp();
     }
 
