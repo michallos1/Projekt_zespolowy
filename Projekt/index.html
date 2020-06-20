@@ -301,9 +301,44 @@
 
             function Atakuj() {
                 console.log('funkcja atakuj');
+                if (p.walka(klasa) == 1) {
+                    add_gold = (klasa.Lvl * 6) + klasa.Dex;
+                    add_exp = klasa.Lvl + klasa.Int;
+                    klasa.Gold += add_gold;
+                    klasa.Exp += add_exp;
+                    alert('Misja zakończona powodzeniem!');
+                    if (klasa.Exp > klasa.ExpUp) {
+                        klasa.LevelUp();
+                    }
+                    setStats();
 
+                    new_element = document.createElement("p");
+                    new_element2 = document.createElement("p");
+                    new_element3 = document.createElement("p");
+                    wartos = document.createTextNode('Wygrałeś walke z potworem');
+                    wartos2 = document.createTextNode('Otrzymałeś: ' + add_exp + ' doświadczenia');
+                    wartos3 = document.createTextNode('Otrzymałeś: ' + add_gold + ' złota');
+                    new_element.appendChild(wartos);
+                    new_element2.appendChild(wartos2);
+                    new_element3.appendChild(wartos3);
+                    element = document.getElementById('logi');
+                    element.appendChild(new_element);
+                    element.appendChild(new_element2);
+                    element.appendChild(new_element3);
 
+                } else {
+                    alert('Poległeś w walce z potworem.');
+                    klasa.Hp = 1;
+                    new_element = document.createElement("p");
+                    wartos = document.createTextNode('Przegrałeś walke z potworem');
+                    new_element.appendChild(wartos);
+                    element = document.getElementById('logi');
+                    element.appendChild(new_element);
+                    setStats();
+                }
             }
+
+
 
 
             function Misja1() {
@@ -631,7 +666,7 @@
                     <input id="walka_akcja_4" value="Uciekaj" type="button">
                 </div>
 
-                <div class="walka2" id="w1">
+                <div class="walka2" id="w2">
                     <!-- WALKA 2-->
 
                     <div class="logi" id="logi">
