@@ -41,7 +41,7 @@ class potwor {
                 return 1; //wygrana walka 
             }
 
-            Klasa.Hp -= random(at2, at1) - Klasa.Def;
+            Klasa.Hp -= parseInt(random(at2, at1) - Klasa.Def);
             console.log("Hp postaci: " + parseInt(Klasa.Hp, 10));
 
         } while (Klasa.Hp > 0);
