@@ -300,40 +300,40 @@
             Upg_helm = document.getElementById('kuznia_akcja_5').addEventListener('click', UpgreadHelm);
 
             function Atakuj() {
-				let level = klasa.Lvl;
-				p.ustaw(level);
+                let level = klasa.Lvl;
+                p.ustaw(level);
                 console.log('funkcja atakuj');
                 if (p.walka(klasa) == 1) {
-				
-					if(walka.style.display == 'block')
-					{
-                    add_gold = (klasa.Lvl * 6) + klasa.Dex;
-                    add_exp = klasa.Lvl + klasa.Int;
-					}else if(walka1.style.display == 'block')
-					{
-                    add_gold = klasa.Lvl + klasa.Dex;
-                    add_exp = (klasa.Lvl * 6) + klasa.Int;
-					}
-					
-					klasa.Gold += add_gold;
+
+                    if (walka.style.display == 'block') {
+                        add_gold = (klasa.Lvl * 6) + klasa.Dex;
+                        add_exp = klasa.Lvl + klasa.Int;
+                    } else if (walka1.style.display == 'block') {
+                        add_gold = klasa.Lvl + klasa.Dex;
+                        add_exp = (klasa.Lvl * 6) + klasa.Int;
+                    }
+
+                    klasa.Gold += add_gold;
                     klasa.Exp += add_exp;
-					
+
                     alert('Misja zakończona powodzeniem!');
                     if (klasa.Exp > klasa.ExpUp) {
                         klasa.LevelUp();
                     }
                     setStats();
+                    element = document.getElementById('logi');
 
-                    new_element = document.createElement("p");
-                    new_element2 = document.createElement("p");
-                    new_element3 = document.createElement("p");
+
+                    new_element = document.createElement("section");
+                    new_element2 = document.createElement("section");
+                    new_element3 = document.createElement("section");
                     wartos = document.createTextNode('Wygrałeś walke z potworem');
                     wartos2 = document.createTextNode('Otrzymałeś: ' + add_exp + ' doświadczenia');
                     wartos3 = document.createTextNode('Otrzymałeś: ' + add_gold + ' złota');
                     new_element.appendChild(wartos);
                     new_element2.appendChild(wartos2);
                     new_element3.appendChild(wartos3);
-                    element = document.getElementById('logi');
+
                     element.appendChild(new_element);
                     element.appendChild(new_element2);
                     element.appendChild(new_element3);
@@ -354,25 +354,25 @@
 
 
             function Misja1() {
-                
+
                 setWalka();
                 console.log('Level postaci: ' + level);
-				
-                
+
+
             }
 
             function Misja2() {
-                
+
                 setWalka1();
                 console.log('Level postaci: ' + level);
-                
+
             }
 
             function Misja3() {
-                
+
                 setWalka2();
                 console.log('Level postaci: ' + level);
-                
+
             }
 
 
