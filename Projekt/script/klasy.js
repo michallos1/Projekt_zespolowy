@@ -1,6 +1,6 @@
 const statywoj = [1, 2, 3]; // int  dex  str
 const statylucz = [1, 3, 2];
-const statymag = [3, 2, 1];
+const statymag = [4, 2, 1];
 
 class Klasa {
     constructor() {
