@@ -126,7 +126,21 @@ input[type="button"]:hover {
     background: url(../obrazy/las.jpg) center/100% no-repeat;
 }
 
-.walka .logi {
+.klasa2 .walka1 {
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: url(../obrazy/gora.jpg) center/100% no-repeat;
+}
+
+.klasa2 .walka2 {
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: url(../obrazy/dungeon.jpg) center/100% no-repeat;
+}
+
+.logi {
     background-color: #000;
     color: #fff;
     opacity: 0.8;

@@ -97,7 +97,7 @@
             targowisko.addEventListener('click', setTargowisko);
             kuznia.addEventListener('click', setKuznia);
             walka.addEventListener('click', setWalka);
-            walka1.addEventListener('click', setWalka);
+            walka1.addEventListener('click', setWalka1);
 
 
 
@@ -168,6 +168,22 @@
                 srodek1.style.display = "none";
                 srodek2.style.display = "none";
                 walka.style.display = "block";
+                srodek3.style.display = "none";
+            }
+			
+			function setWalka1() {
+                srodek0 = document.getElementById('s0');
+                srodek1 = document.getElementById('s1');
+                srodek2 = document.getElementById('s2');
+                srodek3 = document.getElementById('s3');
+                walka = document.getElementById('w');
+				walka1 = document.getElementById('w1');
+				
+                srodek0.style.display = "none";
+                srodek1.style.display = "none";
+                srodek2.style.display = "none";
+                walka.style.display = "none";
+				walka1.style.display = "block";
                 srodek3.style.display = "none";
             }
 
@@ -521,6 +537,19 @@
                     <input id="walka_akcja_3" value="Miktura many" type="button">
                     <input id="walka_akcja_4" value="Uciekaj" type="button">
                 </div>
+				
+				<div class="walka1" id="w1">
+                    <!-- WALKA -->
+
+                    <div class="logi">
+
+                    </div>
+
+                    <input id="walka_akcja_1" value="Atakuj" type="button">
+                    <input id="walka_akcja_2" value="Mikstura życia" type="button">
+                    <input id="walka_akcja_3" value="Miktura many" type="button">
+                    <input id="walka_akcja_4" value="Uciekaj" type="button">
+                </div>
 
 
                 <div class="srodek1" id="s1">
@@ -529,8 +558,6 @@
                     <input id="walka" value="Misja 1" type="button">
                     <input id="walka1" value="Misja 2" type="button">
                     <input id="karczma_akcja_3" value="Misja 3" type="button">
-                    <input id="karczma_akcja_4" value="Misja 4" type="button">
-
 
                 </div>
 
