@@ -261,5 +261,6 @@ input[type="button"]:hover {
 	width:12%;
 	height:100%;
 	background-color: #000;
+	opacity:0.8;
 	display: none;
 }
