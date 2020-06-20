@@ -20,7 +20,6 @@ class potwor {
 			 Klasa.Mana-=6;}
 
 
-
             if (this.Hp < 1) {
                 return 1; //wygrana walka 
             }
@@ -40,6 +39,9 @@ class potwor {
             let at2 = Math.random() * (this.Atk + 1) + (this.Atk / 2);
             console.log('At1: ' + at1 + " At2: " + at2);
             this.Hp -= Klasa.Attack;
+			if(Klasa.Mana>=6)
+			{this.Hp -= Klasa.Int;
+			 Klasa.Mana-=6;}
             console.log('Hp potwora: ' + parseInt(this.Hp, 10));
 
             if (this.Hp < 1) {
