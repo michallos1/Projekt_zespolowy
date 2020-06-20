@@ -419,18 +419,21 @@
 
 
             function Misja1() {
+				zakryj = document.getElementById('z');
 				zakryj.style.display = "block";
                 setWalka();
 				
             }
 
             function Misja2() {
+				zakryj = document.getElementById('z');
 				zakryj.style.display = "block";
                 setWalka1();
 
             }
 
             function Misja3() {
+				zakryj = document.getElementById('z');
 				zakryj.style.display = "block";
                 setWalka2();
 
@@ -869,10 +872,11 @@
         </div>
 
         <div class="tlo" id="t">
-            <div class="klasa1">
-				
-				<div class="zakryj">
+		
+			<div class="zakryj" id="z">
 				</div>
+		
+            <div class="klasa1">
 				
                 <input id="miasto" value="Miasto" type="button">
                 <input id="karczma" value="Karczma" type="button">
@@ -882,6 +886,9 @@
             </div>
 
             <div class="klasa2">
+			
+				
+			
                 <div class="srodek0" id="s0">
                     <!-- MIASTO -->
 
