@@ -147,6 +147,7 @@ input[type="button"]:hover {
     width: 30%;
     height: 80%;
     margin-left: 25%;
+    overflow: scroll;
 }
 
 .klasa2 .walka input[type="button"] {
